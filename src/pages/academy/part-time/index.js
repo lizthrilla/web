@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../../../components/Layout'
 import Container from '../../../components/Container'
 import Section from '../../../components/Section'
@@ -119,67 +118,46 @@ const PartTimeCourses = () => (
           </p>
         </div>
         <hr />
-        <div>
-          <CourseListing
-            title="Digital Marketing"
-            image={dmds}
-            path="/academy/part-time/digital-marketing"
-            month="April"
-            day={13}
-            days={['Saturday']}
-            tags={['6-WEEKS', 'ALL SKILL LEVELS']}
-            time="10:00 a.m. - 3:00 p.m."
-            registration="/academy/part-time/register?course=dmds"
-          >
-            <p>
-              Become Savvy at Digital Strategy in this 6-week Digital Marketing
-              Course. From content strategy and social media to paid campaigns
-              and analytics, learn digital-marketing tactics to increase
-              engagement, drive growth, and acquire users.{' '}
-              <Link to="/academy/part-time/digital-marketing">Learn more</Link>.
-            </p>
-          </CourseListing>
-          <hr />
-          <CourseListing
-            title="Web Development Test Drive"
-            image={wdtd}
-            path="/academy/part-time/test-drive"
-            month="June"
-            day={13}
-            days={['Tues', 'Thurs']}
-            tags={['6-WEEKS', 'BEGINNER']}
-            time="6:30 - 8:30 p.m."
-            registration="/academy/part-time/register?course=wdtd"
-          >
-            <p>
-              In this six-week course, students learn the basics of front-end
-              web development. Students will learn the basic practices,
-              fundamentals, and ideas behind creating dynamic websites with
-              HTML, CSS, and JavaScript.{' '}
-              <Link to="/academy/part-time/test-drive">Learn more</Link>.
-            </p>
-          </CourseListing>
-          <hr />
-          <CourseListing
-            title="React I: Building Interactive Websites"
-            image={rbiw}
-            path="/academy/part-time/react-i"
-            month="July"
-            day={30}
-            days={['Tues', 'Thur']}
-            tags={['6-WEEKS', 'INTERMEDIATE']}
-            time="6:30 - 8:30 p.m."
-            registration="/academy/part-time/register?course=rbiw"
-          >
-            <p>
-              Get up and running with React, one of the most popular JavaScript
-              libraries for building powerful interactive web applications.
-              Students should have prior experience with HTML, CSS, and
-              JavaScript.{' '}
-              <Link to="/academy/part-time/react-i">Learn more</Link>.
-            </p>
-          </CourseListing>
-        </div>
+
+        <CourseListing
+          title="Web Development Test Drive"
+          image={wdtd}
+          path="/academy/part-time/test-drive"
+          month="September"
+          day={16}
+          days={['Mon', 'Wed']}
+          tags={['6-WEEKS', 'BEGINNER']}
+          time="6:30 - 8:30 p.m."
+          registration="/academy/part-time/register?course=wdtd"
+        >
+          <p>
+            In this six-week course, students learn the basics of front-end web
+            development. Students will learn the basic practices, fundamentals,
+            and ideas behind creating dynamic websites with HTML, CSS, and
+            JavaScript.{' '}
+            <Link to="/academy/part-time/test-drive">Learn more</Link>.
+          </p>
+        </CourseListing>
+        <hr />
+        <CourseListing
+          title="React I: Building Interactive Websites"
+          image={rbiw}
+          path="/academy/part-time/react-i"
+          month="July"
+          day={30}
+          days={['Tues', 'Thur']}
+          tags={['6-WEEKS', 'INTERMEDIATE']}
+          time="6:30 - 8:30 p.m."
+          registration="/academy/part-time/register?course=rbiw"
+        >
+          <p>
+            Get up and running with React, one of the most popular JavaScript
+            libraries for building powerful interactive web applications.
+            Students should have prior experience with HTML, CSS, and
+            JavaScript. <Link to="/academy/part-time/react-i">Learn more</Link>.
+          </p>
+        </CourseListing>
+
         <hr />
         <CourseListing
           title="User Experience (UX) for Non-Designers"
@@ -206,6 +184,28 @@ const PartTimeCourses = () => (
           </p>
         </CourseListing>
         <hr />
+        <CourseListing
+          title="Digital Marketing"
+          image={dmds}
+          path="/academy/part-time/digital-marketing"
+          tbd={true}
+          // month="April"
+          // day={13}
+          // days={['Saturday']}
+          // tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+          // time="10:00 a.m. - 3:00 p.m."
+          registration="/academy/part-time/register?course=dmds"
+        >
+          <p>
+            Become Savvy at Digital Strategy in this 6-week Digital Marketing
+            Course. From content strategy and social media to paid campaigns and
+            analytics, learn digital-marketing tactics to increase engagement,
+            drive growth, and acquire users.{' '}
+            <Link to="/academy/part-time/digital-marketing">Learn more</Link>.
+          </p>
+        </CourseListing>
+        <hr />
+
         <article className="message is-primary is-small">
           <div className="message-body content">
             <p>
