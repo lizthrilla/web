@@ -192,7 +192,7 @@ const PartTimeCourses = () => (
           // month="April"
           // day={13}
           // days={['Saturday']}
-          // tags={['6-WEEKS', 'ALL SKILL LEVELS']}
+          tags={['6-WEEKS', 'ALL SKILL LEVELS']}
           // time="10:00 a.m. - 3:00 p.m."
           registration="/academy/part-time/register?course=dmds"
         >
