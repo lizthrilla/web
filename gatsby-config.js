@@ -25,6 +25,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-facebook-pixel',
+      options: {
+        pixelId: '251940662322499',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Suncoast Developers Guild',
