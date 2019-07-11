@@ -50,6 +50,10 @@ class ProgramApplication extends Component {
       rdt('track', 'ViewContent')
     }
 
+    if (window.fbq) {
+      fbq('track', 'ViewContent', { content_name: 'Program Application' })
+    }
+
     this.updateApplicationInterval = setInterval(() => {
       this.updateApplication()
     }, 10000)
@@ -83,6 +87,9 @@ class ProgramApplication extends Component {
         }
         if (window.rdt) {
           rdt('track', 'Lead')
+        }
+        if (window.fbq) {
+          fbq('track', 'SubmitApplication')
         }
         window.localStorage.removeItem('application-state')
       } else {
@@ -121,6 +128,9 @@ class ProgramApplication extends Component {
       }
       if (window.rdt) {
         rdt('track', 'AddToCart')
+      }
+      if (window.fbq) {
+        fbq('track', 'InitiateCheckout')
       }
       await this.setState({ token })
     }
