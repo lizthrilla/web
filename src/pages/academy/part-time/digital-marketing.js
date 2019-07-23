@@ -56,6 +56,7 @@ const TestDriveCourse = ({ data }) => (
             <Link
               to="/academy/part-time/register?course=dmds"
               className="button is-primary"
+              disabled
             >
               Register
             </Link>

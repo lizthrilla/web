@@ -21,13 +21,13 @@ const TestDriveCourse = ({ data }) => (
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Start Date</p>
-              <p className="title is-5">July 30, 2019</p>
+              <p className="title is-5">TBD</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">End Date</p>
-              <p className="title is-5">September 5, 2019</p>
+              <p className="title is-5">TBD</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
@@ -54,6 +54,7 @@ const TestDriveCourse = ({ data }) => (
             <Link
               to="/academy/part-time/register?course=rbiw"
               className="button is-primary"
+              disabled
             >
               Register
             </Link>

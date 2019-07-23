@@ -143,11 +143,12 @@ const PartTimeCourses = () => (
           title="React I: Building Interactive Websites"
           image={rbiw}
           path="/academy/part-time/react-i"
-          month="July"
-          day={30}
-          days={['Tues', 'Thur']}
+          tbd={true}
+          // month="July"
+          // day={30}
+          // days={['Tues', 'Thur']}
+          // time="6:30 - 8:30 p.m."
           tags={['6-WEEKS', 'INTERMEDIATE']}
-          time="6:30 - 8:30 p.m."
           registration="/academy/part-time/register?course=rbiw"
         >
           <p>
