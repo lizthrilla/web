@@ -135,9 +135,7 @@ const HandbookLayout = ({ children }) => (
                                       <li key={lesson.link}>
                                         <Link
                                           partiallyActive
-                                          to={`/handbook/${unit.link}/${
-                                            lesson.link
-                                          }`}
+                                          to={`/handbook/${unit.link}/${lesson.link}`}
                                           activeClassName="is-active"
                                         >
                                           {lesson.name}
