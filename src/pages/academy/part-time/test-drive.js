@@ -23,25 +23,25 @@ const TestDriveCourse = ({ data }) => (
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Start Date</p>
-              <p className="title is-5">September 16, 2019</p>
+              <p className="title is-5">September 21, 2019</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">End Date</p>
-              <p className="title is-5">October 23, 2019</p>
+              <p className="title is-5">October 26, 2019</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Days</p>
-              <p className="title is-5">Mon &amp; Wed</p>
+              <p className="title is-5">Saturdays</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Time</p>
-              <p className="title is-5">6:30 &ndash; 8:30 p.m.</p>
+              <p className="title is-5">10:00 a.m. &ndash; 3:00 p.m.</p>
             </div>
           </div>
           <div className="level-item has-text-centered">

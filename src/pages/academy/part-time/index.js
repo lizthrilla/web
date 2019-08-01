@@ -124,10 +124,10 @@ const PartTimeCourses = () => (
           image={wdtd}
           path="/academy/part-time/test-drive"
           month="September"
-          day={16}
-          days={['Mon', 'Wed']}
+          day={21}
+          days={['Sat']}
           tags={['6-WEEKS', 'BEGINNER']}
-          time="6:30 - 8:30 p.m."
+          time="10:00 a.m. - 3:00 p.m."
           registration="/academy/part-time/register?course=wdtd"
         >
           <p>
