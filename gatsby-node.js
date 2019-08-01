@@ -83,15 +83,15 @@ exports.onCreatePage = ({ page, actions }) => {
 
   switch (page.path) {
     case `/team/volunteers/`:
-      page.matchPath = `/team/volunteers/*`
+      page.matchPath = `\/team\/volunteers\/*`
       createPage(page)
       break
     case `/team/advisory/`:
-      page.matchPath = `/team/advisory/*`
+      page.matchPath = `\/team\/advisory\/*`
       createPage(page)
       break
     case `/team/`:
-      page.matchPath = `/team/*`
+      page.matchPath = `\/team\/(?!(?:advisory|volunteers))\/*`
       createPage(page)
       break
   }

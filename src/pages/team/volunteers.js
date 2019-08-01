@@ -35,6 +35,7 @@ const Members = ({ children, members }) => (
   <div className="columns is-multiline">
     {members.map(({ node: member }) => (
       <TeamMember
+        key={member.slug}
         link={`/team/volunteers/${member.slug}`}
         {...member.person}
         title={member.altTitle}
