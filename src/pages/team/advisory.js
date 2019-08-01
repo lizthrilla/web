@@ -13,9 +13,9 @@ const TeamAdvisory = ({ data }) => (
   <Layout>
     <Section>
       <Container>
-        <PageTitle seo="Advisory Board">Our Team</PageTitle>
+        <PageTitle seo="Advisory Committee">Our Team</PageTitle>
         <TeamNavigation />
-        <h3 className="title is-three">Our Advisory Board</h3>
+        <h3 className="title is-three">Our Advisory Committee</h3>
         <Router>
           <Members
             path="team/advisory"
@@ -35,6 +35,7 @@ const Members = ({ children, members }) => (
   <div className="columns is-multiline">
     {members.map(({ node: member }) => (
       <TeamMember
+        key={member.slug}
         link={`/team/advisory/${member.slug}`}
         {...member.person}
         title={`${member.person.title} @ ${member.person.company}`}

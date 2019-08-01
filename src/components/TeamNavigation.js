@@ -6,7 +6,7 @@ const TeamNavigation = () => (
     <ul>
       <NavTab to="/team">Staff</NavTab>
       <NavTab to="/team/volunteers">Volunteers</NavTab>
-      <NavTab to="/team/advisory">Advisory Board</NavTab>
+      <NavTab to="/team/advisory">Advisory Committee</NavTab>
     </ul>
   </div>
 )
