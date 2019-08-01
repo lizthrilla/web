@@ -14,30 +14,30 @@ import { hashCode } from '../../../util'
 const CODE_HASH = -523902460
 
 const COURSES = {
-  dmds: {
-    session: 'Spring Session',
-    name: 'Digital Marketing',
+  // dmds: {
+  //   session: 'Spring Session',
+  //   name: 'Digital Marketing',
+  //   days: 'Saturdays',
+  //   time: '10:00 a.m. - 3:00 p.m.',
+  //   start: '2019-04-13',
+  //   end: '2019-04-20',
+  // },
+  wdtd: {
+    session: 'Fall Session',
+    name: 'Web Development Test Drive',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2019-04-13',
-    end: '2019-04-20',
+    start: '2019-09-21',
+    end: '2019-10-26',
   },
-  wdtd: {
-    session: 'Summer Session',
-    name: 'Web Development Test Drive',
-    days: 'Tuesdays and Thursdays',
-    time: '6:30 - 8:30 p.m.',
-    start: '2019-06-18',
-    end: '2019-07-25',
-  },
-  rbiw: {
-    session: 'Summer Session',
-    name: 'React I: Building Interactive Websites',
-    days: 'Tuesdays and Thursdays',
-    time: '6:30 - 8:30 p.m.',
-    start: '2019-07-30',
-    end: '2019-09-05',
-  },
+  // rbiw: {
+  //   session: 'Summer Session',
+  //   name: 'React I: Building Interactive Websites',
+  //   days: 'Tuesdays and Thursdays',
+  //   time: '6:30 - 8:30 p.m.',
+  //   start: '2019-07-30',
+  //   end: '2019-09-05',
+  // },
 }
 
 const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
