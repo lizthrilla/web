@@ -16,26 +16,26 @@ const ProgramSchedule = () => (
         </thead>
         <tbody>
           <tr>
-            <td>Cohort XIV</td>
-            <td>
-              <em>In Progress</em>
-            </td>
-            <td>April 29, 2019</td>
-            <td>July 19, 2019</td>
-          </tr>
-          <tr className="upcoming">
             <td>Cohort XV</td>
             <td>
-              <Link to="/academy/apply">Now Enrolling</Link>
+              <em>In Progress</em>
             </td>
             <td>July 29, 2019</td>
             <td>October 18, 2019</td>
           </tr>
+          <tr className="upcoming">
+            <td>Cohort 16</td>
+            <td>
+              <Link to="/academy/apply">Now Enrolling</Link>
+            </td>
+            <td>October 28, 2019</td>
+            <td>January 31, 2020</td>
+          </tr>
           <tr>
-            <td>Cohort XVI</td>
+            <td>Cohort 17</td>
             <td>"</td>
-            <td>Fall 2019</td>
-            <td>Winter 2019</td>
+            <td>February 2020</td>
+            <td>Spring 2020</td>
           </tr>
         </tbody>
       </table>

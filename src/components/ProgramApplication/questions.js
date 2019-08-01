@@ -5,9 +5,9 @@ export default [
       type: 'radio',
       question: 'When are you hoping to start the program?',
       answers: [
-        'April 29th, 2019 (Cohort XIV)',
-        'July 29th, 2019 (Cohort XV)',
-        'Fall 2019',
+        'October 28th, 2019 (Cohort 16)',
+        'February 2020 (Cohort 17)',
+        'Summer 2020',
         'Later in the future',
       ],
     },
