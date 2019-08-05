@@ -25,10 +25,10 @@ const COURSES = {
   wdtd: {
     session: 'Fall Session',
     name: 'Web Development Test Drive',
-    days: 'Saturdays',
-    time: '10:00 a.m. - 3:00 p.m.',
-    start: '2019-09-21',
-    end: '2019-10-26',
+    days: 'Mondays and Wednesdays',
+    time: '6:30 - 8:30 p.m.',
+    start: '2019-09-16',
+    end: '2019-10-21',
   },
   // rbiw: {
   //   session: 'Summer Session',
