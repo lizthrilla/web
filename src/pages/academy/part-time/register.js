@@ -28,7 +28,7 @@ const COURSES = {
     days: 'Mondays and Wednesdays',
     time: '6:30 - 8:30 p.m.',
     start: '2019-09-16',
-    end: '2019-10-21',
+    end: '2019-10-23',
   },
   // rbiw: {
   //   session: 'Summer Session',
