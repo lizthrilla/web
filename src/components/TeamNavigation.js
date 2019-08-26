@@ -5,8 +5,10 @@ const TeamNavigation = () => (
   <div className="tabs">
     <ul>
       <NavTab to="/team">Staff</NavTab>
-      <NavTab to="/team/volunteers">Volunteers</NavTab>
+      <NavTab to="/team/board">Board of Directors</NavTab>
       <NavTab to="/team/advisory">Advisory Committee</NavTab>
+      <NavTab to="/team/alumni">Alumni Committee</NavTab>
+      <NavTab to="/team/volunteers">Volunteers</NavTab>
     </ul>
   </div>
 )
