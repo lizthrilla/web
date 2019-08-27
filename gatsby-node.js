@@ -35,6 +35,15 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
+
+            teamStaff: allContentfulTeamMember {
+              edges {
+                node {
+                  role
+                  slug
+                }
+              }
+            }
           }
         `
       ).then(result => {
@@ -72,29 +81,46 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
+
+        result.data.teamStaff.edges.forEach(({ node }) => {
+          switch (node.role) {
+            case 'Staff':
+              createPage({
+                path: `/team/${node.slug}/`,
+                component: path.resolve('./src/pages/team/index.js'),
+              })
+              break
+            case 'Advisory Board':
+              createPage({
+                path: `/team/advisory/${node.slug}/`,
+                component: path.resolve('./src/pages/team/advisory.js'),
+              })
+              break
+            case 'Alumni Committee':
+              createPage({
+                path: `/team/alumni/${node.slug}/`,
+                component: path.resolve('./src/pages/team/alumni.js'),
+              })
+              break
+            case 'Board Member':
+              createPage({
+                path: `/team/board/${node.slug}/`,
+                component: path.resolve('./src/pages/team/board.js'),
+              })
+              break
+            case 'Volunteer':
+              createPage({
+                path: `/team/volunteers/${node.slug}/`,
+                component: path.resolve('./src/pages/team/volunteers.js'),
+              })
+              break
+            default:
+              break
+          }
+        })
       })
     )
   })
-}
-
-// TODO: Move these to static pages, like success stories above.
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage } = actions
-
-  switch (page.path) {
-    case `/team/volunteers/`:
-      page.matchPath = `\/team\/volunteers\/*`
-      createPage(page)
-      break
-    case `/team/advisory/`:
-      page.matchPath = `\/team\/advisory\/*`
-      createPage(page)
-      break
-    case `/team/`:
-      page.matchPath = `\/team\/(?!(?:advisory|volunteers))\/*`
-      createPage(page)
-      break
-  }
 }
 
 exports.onPostBuild = ({ graphql }) => {
