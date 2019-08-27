@@ -89,7 +89,10 @@ class ProgramApplication extends Component {
           rdt('track', 'Lead')
         }
         if (window.fbq) {
-          fbq('track', 'SubmitApplication')
+          fbq('track', 'SubmitApplication', {
+            value: 745.0,
+            currency: 'USD',
+          })
         }
         window.localStorage.removeItem('application-state')
       } else {
@@ -130,7 +133,14 @@ class ProgramApplication extends Component {
         rdt('track', 'AddToCart')
       }
       if (window.fbq) {
-        fbq('track', 'InitiateCheckout')
+        fbq('track', 'InitiateCheckout', {
+          value: 100.0,
+          currency: 'USD',
+        })
+        fbq('track', 'Lead', {
+          value: 14900.0,
+          currency: 'USD',
+        })
       }
       await this.setState({ token })
     }
