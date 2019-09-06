@@ -94,6 +94,15 @@ class ProgramApplication extends Component {
             currency: 'USD',
           })
         }
+
+        if (window.twq) {
+          twq('track', 'Purchase', {
+            value: '745',
+            currency: 'USD',
+            num_items: '1',
+          })
+        }
+
         window.localStorage.removeItem('application-state')
       } else {
         fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
