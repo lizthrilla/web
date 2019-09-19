@@ -76,7 +76,7 @@ export const pageQuery = graphql`
               }
             }
             image {
-              fluid(maxHeight: 600, resizingBehavior: FILL) {
+              fluid(maxHeight: 800, maxWidth: 800, resizingBehavior: FILL) {
                 ...GatsbyContentfulFluid_withWebp
               }
               modal: fluid(maxWidth: 800, maxHeight: 600) {
