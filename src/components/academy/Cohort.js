@@ -6,7 +6,6 @@ import moment from 'moment'
 import Container from '../../components/Container'
 import Section from '../../components/Section'
 import PageTitle from '../../components/PageTitle'
-import MailingListForm from '../MailingListForm'
 import Graduate from './Graduate'
 
 const Cohort = ({
@@ -106,7 +105,6 @@ const Cohort = ({
           </div>
         </div>
       </section>
-      <MailingListForm />
     </>
   )
 }

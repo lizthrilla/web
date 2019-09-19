@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Section from '../../components/Section'
 import Container from '../../components/Container'
-import MailingListForm from '../../components/MailingListForm'
 import PageTitle from '../../components/PageTitle'
 import AcademyNavigation from '../../components/academy/AcademyNavigation'
 import ProgramNavigation from '../../components/academy/ProgramNavigation'
@@ -18,7 +17,6 @@ const AcademyCatalog = () => (
         <ProgramCatalog />
       </Container>
     </Section>
-    <MailingListForm />
   </Layout>
 )
 

@@ -5,7 +5,6 @@ import SplashHero from '../components/SplashHero'
 import Link from '../components/UniversalLink'
 import AcademyCommunityDuo from '../components/AcademyCommunityDuo'
 import MissionStatement from '../components/MissionStatement'
-import MailingListForm from '../components/MailingListForm'
 import junior from '../images/junior.svg'
 import swag from '../images/swag.svg'
 
@@ -122,7 +121,6 @@ const IndexPage = () => (
         <hr />
       </div>
     </section>
-    <MailingListForm />
   </Layout>
 )
 

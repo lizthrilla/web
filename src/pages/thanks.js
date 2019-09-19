@@ -3,7 +3,6 @@ import Layout from '../components/Layout'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import Section from '../components/Section'
-import MailingListForm from '../components/MailingListForm'
 // import temp from '../images/temp.svg'
 
 const ThanksPage = () => (
@@ -20,7 +19,6 @@ const ThanksPage = () => (
         </div>
       </Container>
     </Section>
-    <MailingListForm />
   </Layout>
 )
 

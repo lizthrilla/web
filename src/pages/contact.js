@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import Container from '../components/Container'
 import Section from '../components/Section'
 import PageTitle from '../components/PageTitle'
-import MailingListForm from '../components/MailingListForm'
 
 const ContactPage = () => (
   <Layout>
@@ -71,7 +70,6 @@ const ContactPage = () => (
         </div>
       </Container>
     </Section>
-    <MailingListForm />
   </Layout>
 )
 

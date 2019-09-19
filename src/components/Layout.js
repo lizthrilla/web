@@ -7,10 +7,11 @@ import Footer from './Footer'
 import Head from './Head'
 import UniversalLink from './UniversalLink'
 import MainNavigation from './MainNavigation'
+import MailingListForm from './MailingListForm'
 
 import '../styles/screen.scss'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, noMailingList }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -60,6 +61,7 @@ const Layout = ({ children }) => {
           <Head />
           <MainNavigation />
           {children}
+          {!noMailingList && <MailingListForm />}
           <Footer />
         </MDXProvider>
       )}

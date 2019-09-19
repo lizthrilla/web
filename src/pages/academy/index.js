@@ -3,7 +3,6 @@ import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import PageTitle from '../../components/PageTitle'
 import Section from '../../components/Section'
-import MailingListForm from '../../components/MailingListForm'
 import AcademyNavigation from '../../components/academy/AcademyNavigation'
 import ProgramNavigation from '../../components/academy/ProgramNavigation'
 import OurCurriculum from '../../components/academy/OurCurriculum'
@@ -20,7 +19,6 @@ const AcademyIndex = () => (
         <ProgramSchedule />
       </Container>
     </Section>
-    <MailingListForm />
   </Layout>
 )
 

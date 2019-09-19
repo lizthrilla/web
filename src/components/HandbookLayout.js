@@ -68,7 +68,7 @@ const Units = [
 
 const HandbookLayout = ({ children }) => (
   <div className="handbook">
-    <Layout>
+    <Layout noMailingList>
       <Section>
         <Container>
           <MDXProvider

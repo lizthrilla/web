@@ -6,7 +6,6 @@ import Layout from '../components/Layout'
 import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import Section from '../components/Section'
-import MailingListForm from '../components/MailingListForm'
 import styled from 'styled-components'
 
 const Media = styled.div`
@@ -75,7 +74,6 @@ const BlogIndex = ({ data }) => {
           </div>
         </Container>
       </Section>
-      <MailingListForm />
     </Layout>
   )
 }
