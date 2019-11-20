@@ -10,7 +10,7 @@
   "dependencies": {
     "@mdx-js/mdx": "1.0.20",
     "@mdx-js/react": "1.0.20",
-    "@sentry/browser": "5.5.0",
+    "@sentry/browser": "5.9.1",
     "bulma": "0.8.0",
     "classnames": "2.2.6",
     "feed": "4.0.0",
