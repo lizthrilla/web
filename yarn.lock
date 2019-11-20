@@ -11085,12 +11085,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-re-carousel@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/re-carousel/-/re-carousel-2.3.1.tgz#23c5fb5b5fa1795d245f4f5b6860a90887910490"
-  integrity sha512-JwiTN7AMvM8GBWwVwYO83oQ+Y7gi1ZWaJvYB2/kpOL8IbMvnmCplSZfly7IcOHvQAc1zi6fwFwRbv+69CJKqBg==
+re-carousel@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/re-carousel/-/re-carousel-2.4.0.tgz#636ec0c8cf00b012a845d37b6f7ab1b52569806e"
+  integrity sha512-xogK+SLWHXdzEfexSC2UQWk3m6uxL3edqrAMseslEIQ/hjtPHkMLdFToI5oMptUR1t9v6Jqo/vu5mQGUs/q5cg==
   dependencies:
-    prop-types "^15.6.2"
+    prop-types "^15.7.2"
 
 react-dev-utils@^4.2.1:
   version "4.2.3"
