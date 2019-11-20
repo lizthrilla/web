@@ -15,7 +15,7 @@ const NavItem = ({ to, icon, children, paths }) => (
       return (
         <div
           className={cx('column has-text-centered', {
-            'is-active': active,
+            'is-active': active
           })}
         >
           <div>

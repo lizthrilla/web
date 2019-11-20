@@ -26,7 +26,7 @@ const SuccessStories = ({ children, stories }) => (
             <div
               className="content"
               dangerouslySetInnerHTML={{
-                __html: story.story.childMarkdownRemark.html,
+                __html: story.story.childMarkdownRemark.html
               }}
             />
           </div>

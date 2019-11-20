@@ -55,12 +55,12 @@ module.exports = graphql => {
           updated: new Date(), // TODO: latest post date
           feedLinks: {
             atom: `${config.siteMetadata.siteUrl}/atom.xml`,
-            json: `${config.siteMetadata.siteUrl}/feed.json`,
+            json: `${config.siteMetadata.siteUrl}/feed.json`
           },
           author: {
             name: 'Suncoast Developers Guild',
-            email: 'hello@suncoast.io',
-          },
+            email: 'hello@suncoast.io'
+          }
         })
         result.data.allContentfulBlogPost.edges.forEach(({ node: post }) => {
           feed.addItem({
@@ -72,8 +72,8 @@ module.exports = graphql => {
             image: 'https://' + post.heroImage.fluid.src,
             content: post.body.childMarkdownRemark.html,
             author: {
-              name: post.author.name,
-            },
+              name: post.author.name
+            }
           })
         })
         fs.writeFileSync('./public/atom.xml', feed.atom1())

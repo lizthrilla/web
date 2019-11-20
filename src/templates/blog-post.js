@@ -59,7 +59,7 @@ const BlogPost = ({ data }) => {
               <div
                 className="content"
                 dangerouslySetInnerHTML={{
-                  __html: post.body.childMarkdownRemark.html,
+                  __html: post.body.childMarkdownRemark.html
                 }}
               />
               <hr />

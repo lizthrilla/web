@@ -32,7 +32,7 @@ const PersonModal = ({ person, content, returnTo }) => (
           <div
             className="content"
             dangerouslySetInnerHTML={{
-              __html: content.childMarkdownRemark.html,
+              __html: content.childMarkdownRemark.html
             }}
           />
           <nav className="level is-mobile">

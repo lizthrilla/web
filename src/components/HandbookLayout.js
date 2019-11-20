@@ -12,7 +12,7 @@ const Units = [
   {
     name: 'Pre-work',
     link: 'prework',
-    modules: [],
+    modules: []
   },
   {
     name: 'Fundamentals',
@@ -23,47 +23,47 @@ const Units = [
         lessons: [
           {
             name: 'Intro To HTML',
-            link: 'modules/html-css/lessons/intro-to-html/',
+            link: 'modules/html-css/lessons/intro-to-html/'
           },
           {
             name: 'Intro To CSS',
-            link: 'modules/html-css/lessons/intro-to-css',
+            link: 'modules/html-css/lessons/intro-to-css'
           },
           {
             name: 'CSS Layout',
-            link: 'modules/html-css/lessons/css-layout',
+            link: 'modules/html-css/lessons/css-layout'
           },
           {
             name: 'Intro to Responsive Web',
-            link: 'modules/html-css/lessons/intro-to-responsive',
-          },
-        ],
+            link: 'modules/html-css/lessons/intro-to-responsive'
+          }
+        ]
       },
       {
         name: 'JavaScript',
         lessons: [
           {
             name: 'Welcome To Javascript',
-            link: 'modules/javascript/lessons/welcome-to-javascript',
+            link: 'modules/javascript/lessons/welcome-to-javascript'
           },
           {
             name: 'JavaScript Basics',
-            link: 'modules/javascript/lessons/javascript-basics',
-          },
-        ],
-      },
-    ],
+            link: 'modules/javascript/lessons/javascript-basics'
+          }
+        ]
+      }
+    ]
   },
   {
     name: 'Front-end',
     link: 'curriculum/front-end',
-    modules: [],
+    modules: []
   },
   {
     name: 'Full-stack',
     link: 'curriculum/back-end',
-    modules: [],
-  },
+    modules: []
+  }
 ]
 
 const HandbookLayout = ({ children }) => (
@@ -102,7 +102,7 @@ const HandbookLayout = ({ children }) => (
                 } else {
                   return <pre {...props} />
                 }
-              },
+              }
             }}
           >
             <div className="columns">

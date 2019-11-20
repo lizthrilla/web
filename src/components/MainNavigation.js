@@ -46,7 +46,7 @@ class MainNavigation extends Component {
             </h1>
             <span
               className={cx('navbar-burger burger', {
-                'is-active': active,
+                'is-active': active
               })}
               onClick={this._toggle}
             >

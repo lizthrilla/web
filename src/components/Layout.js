@@ -46,7 +46,7 @@ const Layout = ({ children, noMailingList }) => {
               <h4 className="title is-4" {...rest}>
                 {children}
               </h4>
-            ),
+            )
           }}
         >
           <Helmet>
@@ -70,7 +70,7 @@ const Layout = ({ children, noMailingList }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout

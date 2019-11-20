@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   givenName: '',
   familyName: '',
   email: '',
-  thanks: false,
+  thanks: false
 }
 
 class MailingListForm extends React.Component {
@@ -40,14 +40,14 @@ class MailingListForm extends React.Component {
       fetch(`${GATEWAY_API_URL}/lead`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json; charset=utf-8',
+          'Content-Type': 'application/json; charset=utf-8'
         },
         body: JSON.stringify({
           source: 'mailing-list',
           givenName,
           familyName,
-          email,
-        }),
+          email
+        })
       }).then(() => {
         this.setState({ ...INITIAL_STATE, thanks: true })
       })

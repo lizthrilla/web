@@ -9,7 +9,7 @@ const NavTab = ({ to, children }) => (
     {({ location }) => (
       <li
         className={cx({
-          'is-active': location.pathname === resolve(to),
+          'is-active': location.pathname === resolve(to)
         })}
       >
         <Link to={to}>{children}</Link>
