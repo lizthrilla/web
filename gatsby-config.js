@@ -113,7 +113,7 @@ module.exports = {
       options: {
         name: 'handbook',
         path: `${__dirname}/src/pages/handbook`,
-        ignore: [`**/\.*/**`], // ignore files starting with a dot
+        ignore: [`**/.*`, `**/.*/**`], // ignore files starting with a dot
       },
     },
     {
