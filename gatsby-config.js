@@ -109,6 +109,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/.*`, `**/.*/**`, `**/node_modules/**`]
+      }
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'handbook',
@@ -123,12 +130,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    {
-      resolve: 'gatsby-plugin-exclude',
-      options: { paths: [`**/.*`, `**/.*/**`] }
-    },
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-remove-serviceworker'
+    'gatsby-transformer-sharp'
   ]
 }
