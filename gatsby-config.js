@@ -4,7 +4,7 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://suncoast.io',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env
 
 const isNetlifyProduction = NETLIFY_ENV === 'production'
@@ -15,20 +15,20 @@ module.exports = {
     title: 'Suncoast Developers Guild',
     description:
       'An immersive code school in Tampa Bay, Suncoast Developers Guild serves people, not profit. We are changing lives and teaching people to be the best software developers they can be.',
-    siteUrl,
+    siteUrl
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-120953554-1',
-      },
+        trackingId: 'UA-120953554-1'
+      }
     },
     {
       resolve: 'gatsby-plugin-facebook-pixel',
       options: {
-        pixelId: '251940662322499',
-      },
+        pixelId: '251940662322499'
+      }
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -39,8 +39,8 @@ module.exports = {
         background_color: '#80ced2',
         theme_color: '#85577e',
         display: 'browser',
-        icon: 'src/images/icon.png',
-      },
+        icon: 'src/images/icon.png'
+      }
     },
     {
       resolve: `gatsby-plugin-alias-imports`,
@@ -49,18 +49,18 @@ module.exports = {
           '@handbook': require('path').resolve(
             __dirname,
             'src/pages/handbook/.components'
-          ),
+          )
         },
-        extensions: [],
-      },
+        extensions: []
+      }
     },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
@@ -73,59 +73,64 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }],
+            policy: [{ userAgent: '*' }]
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null,
+            host: null
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null,
-          },
-        },
-      },
+            host: null
+          }
+        }
+      }
     },
     {
-      resolve: `gatsby-mdx`,
+      resolve: 'gatsby-mdx',
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          handbook: require.resolve('./src/components/HandbookLayout.js'),
+          handbook: require.resolve('./src/components/HandbookLayout.js')
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: 'gatsby-remark-copy-linked-files'
           },
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1035,
-            },
-          },
-        ],
-      },
+              maxWidth: 1035
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/.*`, `**/.*/**`, `**/node_modules/**`]
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'handbook',
         path: `${__dirname}/src/pages/handbook`,
-        ignore: [`**/.*`, `**/.*/**`], // ignore files starting with a dot
-      },
+        ignore: [`**/.*`, `**/.*/**`] // ignore files starting with a dot
+      }
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+      }
     },
-
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-remove-serviceworker',
-  ],
+    'gatsby-transformer-sharp'
+  ]
 }
