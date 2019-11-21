@@ -20,6 +20,7 @@
     "gatsby-mdx": "0.6.3",
     "gatsby-plugin-alias-imports": "1.0.5",
     "gatsby-plugin-catch-links": "2.1.17",
+    "gatsby-plugin-exclude": "^1.0.2",
     "gatsby-plugin-facebook-pixel": "1.0.3",
     "gatsby-plugin-google-analytics": "2.1.28",
     "gatsby-plugin-manifest": "2.2.29",
