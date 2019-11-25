@@ -21,7 +21,7 @@ const CourseListing = ({
   month,
   days,
   time,
-  tbd,
+  tbd
 }) => (
   <article className="columns">
     <div className="column">
@@ -123,11 +123,11 @@ const PartTimeCourses = () => (
           title="Web Development Test Drive"
           image={wdtd}
           path="/academy/part-time/test-drive"
-          month="September"
+          month="January"
           day={16}
-          days={['Mon', 'Wed']}
+          days={['Sat']}
           tags={['6-WEEKS', 'BEGINNER']}
-          time="6:30 - 8:30 p.m."
+          time="10:00 a.m. - 3:00 p.m."
           registration="/academy/part-time/register?course=wdtd"
         >
           <p>

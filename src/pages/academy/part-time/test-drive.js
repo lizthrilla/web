@@ -23,32 +23,32 @@ const TestDriveCourse = ({ data }) => (
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Start Date</p>
-              <p className="title is-5">September 16, 2019</p>
+              <p className="title is-5">January 4, 2019</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">End Date</p>
-              <p className="title is-5">October 23, 2019</p>
+              <p className="title is-5">February 8, 2019</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Days</p>
-              <p className="title is-5">Mon &amp; Wed</p>
+              <p className="title is-5">Sat</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Time</p>
-              <p className="title is-5">6:30 &ndash; 8:30 p.m.</p>
+              <p className="title is-5">10:00 a.m. &ndash; 3:00 p.m.</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Fee</p>
               <p className="title is-5">
-                $1,999<sup>*</sup>
+                $1,200<sup>*</sup>
               </p>
             </div>
           </div>
@@ -126,8 +126,7 @@ const TestDriveCourse = ({ data }) => (
             <div
               className="content"
               dangerouslySetInnerHTML={{
-                __html:
-                  data.contentfulPerson.biography.childMarkdownRemark.html,
+                __html: data.contentfulPerson.biography.childMarkdownRemark.html
               }}
             />
           </div>
