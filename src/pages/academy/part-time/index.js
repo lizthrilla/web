@@ -124,7 +124,7 @@ const PartTimeCourses = () => (
           image={wdtd}
           path="/academy/part-time/test-drive"
           month="January"
-          day={16}
+          day={4}
           days={['Sat']}
           tags={['6-WEEKS', 'BEGINNER']}
           time="10:00 a.m. - 3:00 p.m."
