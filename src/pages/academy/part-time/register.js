@@ -290,8 +290,8 @@ const Price = ({ code }) => {
   if (CODE_HASH === hashCode(code)) {
     return (
       <span className="discount">
-        <span className="full-price">$1,999</span>
-        <span className="discounted has-text-success">$1,199</span>
+        <span className="full-price">$1,200</span>
+        <span className="discounted has-text-success">$800</span>
       </span>
     )
   } else {
