@@ -23,13 +23,13 @@ const COURSES = {
   //   end: '2019-04-20',
   // },
   wdtd: {
-    session: 'Fall Session',
+    session: 'Winter Session 2020',
     name: 'Web Development Test Drive',
-    days: 'Mondays and Wednesdays',
-    time: '6:30 - 8:30 p.m.',
-    start: '2019-09-16',
-    end: '2019-10-23',
-  },
+    days: 'Saturdays',
+    time: '10:00 a.m. - 3:00 p.m.',
+    start: '2020-01-04',
+    end: '2020-02-08'
+  }
   // rbiw: {
   //   session: 'Summer Session',
   //   name: 'React I: Building Interactive Websites',
@@ -51,7 +51,7 @@ const PartTimeRegistration = () => {
     email: '',
     phone: '',
     code: '',
-    acceptPolicy: false,
+    acceptPolicy: false
   })
 
   const onChange = event => {
@@ -69,21 +69,21 @@ const PartTimeRegistration = () => {
     fetch(`${GATEWAY_API_URL}/api/register`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'application/json; charset=utf-8'
       },
       body: JSON.stringify({
         full_name: values.name,
         email_address: values.email,
         phone_number: values.phone,
         code: values.code,
-        course: values.course,
-      }),
+        course: values.course
+      })
     }).then(() => {
       if (window.ga) {
         ga('send', 'event', {
           eventCategory: 'Course Registration',
           eventAction: 'Submit',
-          eventLabel: COURSES[values.course].name,
+          eventLabel: COURSES[values.course].name
         })
       }
       navigate('/thanks')
