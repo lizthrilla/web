@@ -295,7 +295,7 @@ const Price = ({ code }) => {
       </span>
     )
   } else {
-    return <span>$1,999</span>
+    return <span>$1,200</span>
   }
 }
 
