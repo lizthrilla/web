@@ -50,7 +50,7 @@
     "whatwg-fetch": "3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.7.5",
+    "@babel/core": "7.7.7",
     "babel-eslint": "10.0.3",
     "eslint": "6.7.2",
     "eslint-config-prettier": "6.7.0",
