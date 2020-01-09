@@ -52,7 +52,7 @@ const TestDriveCourse = ({ data }) => (
               </p>
             </div>
           </div>
-          <div className="level-item has-text-centered">
+          {/* <div className="level-item has-text-centered">
             <Link
               to="/academy/part-time/register?course=dmds"
               className="button is-primary"
@@ -60,7 +60,7 @@ const TestDriveCourse = ({ data }) => (
             >
               Register
             </Link>
-          </div>
+          </div> */}
         </nav>
 
         <h4 className="title is-4">Course Description</h4>
@@ -131,8 +131,7 @@ const TestDriveCourse = ({ data }) => (
             <div
               className="content"
               dangerouslySetInnerHTML={{
-                __html:
-                  data.contentfulPerson.biography.childMarkdownRemark.html,
+                __html: data.contentfulPerson.biography.childMarkdownRemark.html
               }}
             />
           </div>
@@ -264,14 +263,14 @@ const TestDriveCourse = ({ data }) => (
             </div>
           </div>
         </div>
-        <div className="has-text-centered">
+        {/* <div className="has-text-centered">
           <Link
             to="/academy/part-time/register?course=dmds"
             className="button is-primary"
           >
             Register for this Course
           </Link>
-        </div>
+        </div> */}
       </Container>
     </Section>
   </Layout>

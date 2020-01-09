@@ -66,11 +66,7 @@ const CourseListing = ({
       <nav className="level">
         <div className="level-item">
           <div className="has-text-centered">
-            {tbd ? (
-              <>
-                <span className="tag">TBD</span>
-              </>
-            ) : (
+            {!tbd && (
               <>
                 <div className="calendar-date">
                   <span className="month">{month}</span>
@@ -138,7 +134,16 @@ const PartTimeCourses = () => (
             <Link to="/academy/part-time/test-drive">Learn more</Link>.
           </p>
         </CourseListing>
-        <hr />
+
+        <h3 className="title is-2">Past Sessions</h3>
+
+        <div className="content">
+          <p>
+            These courses have been offered in the past, and may be offered
+            again based on demand.
+          </p>
+        </div>
+
         <CourseListing
           title="React I: Building Interactive Websites"
           image={rbiw}
@@ -182,27 +187,6 @@ const PartTimeCourses = () => (
             techniques and methodologies to develop a product or service of
             their choosing.{' '}
             <Link to="/academy/part-time/user-experience">Learn more</Link>.
-          </p>
-        </CourseListing>
-        <hr />
-        <CourseListing
-          title="Digital Marketing"
-          image={dmds}
-          path="/academy/part-time/digital-marketing"
-          tbd={true}
-          // month="April"
-          // day={13}
-          // days={['Saturday']}
-          tags={['6-WEEKS', 'ALL SKILL LEVELS']}
-          // time="10:00 a.m. - 3:00 p.m."
-          registration="/academy/part-time/register?course=dmds"
-        >
-          <p>
-            Become Savvy at Digital Strategy in this 6-week Digital Marketing
-            Course. From content strategy and social media to paid campaigns and
-            analytics, learn digital-marketing tactics to increase engagement,
-            drive growth, and acquire users.{' '}
-            <Link to="/academy/part-time/digital-marketing">Learn more</Link>.
           </p>
         </CourseListing>
         <hr />
