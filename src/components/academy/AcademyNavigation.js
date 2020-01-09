@@ -17,7 +17,7 @@ const AcademyNavigation = () => (
                 '/academy',
                 '/academy/catalog',
                 '/academy/schedule/',
-                '/academy/career',
+                '/academy/career'
               ]}
             >
               Web Development
@@ -29,7 +29,7 @@ const AcademyNavigation = () => (
                 '/academy/tuition',
                 '/academy/tuition/financing',
                 '/academy/admissions',
-                '/academy/admissions/requirements',
+                '/academy/admissions/requirements'
               ]}
             >
               Tuition &amp; Admissions
@@ -54,9 +54,6 @@ const AcademyNavigation = () => (
             </NavItem>
             <NavItem to="/demo-day" icon="fas fa-graduation-cap fa-lg">
               Graduates
-            </NavItem>
-            <NavItem to="/academy/apply" icon="fas fa-laptop fa-lg">
-              Apply Now
             </NavItem>
           </nav>
         </Container>
