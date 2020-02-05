@@ -8,7 +8,6 @@ import AcademyNavigation from '../../../components/academy/AcademyNavigation'
 import wdtd from '../../../images/part-time/wdtd.svg'
 import rbiw from '../../../images/part-time/rbiw.svg'
 import uxnd from '../../../images/part-time/uxnd.svg'
-import dmds from '../../../images/part-time/dmds.svg'
 
 const CourseListing = ({
   title,
@@ -119,8 +118,8 @@ const PartTimeCourses = () => (
           title="Web Development Test Drive"
           image={wdtd}
           path="/academy/part-time/test-drive"
-          month="January"
-          day={4}
+          month="March"
+          day={28}
           days={['Sat']}
           tags={['6-WEEKS', 'BEGINNER']}
           time="10:00 a.m. - 3:00 p.m."

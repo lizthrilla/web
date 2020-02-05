@@ -27,8 +27,8 @@ const COURSES = {
     name: 'Web Development Test Drive',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2020-01-04',
-    end: '2020-02-08'
+    start: '2020-03-28',
+    end: '2020-05-02'
   }
   // rbiw: {
   //   session: 'Summer Session',

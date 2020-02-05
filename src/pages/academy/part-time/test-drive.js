@@ -23,13 +23,13 @@ const TestDriveCourse = ({ data }) => (
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">Start Date</p>
-              <p className="title is-5">January 4, 2019</p>
+              <p className="title is-5">March 28, 2020</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
             <div>
               <p className="heading">End Date</p>
-              <p className="title is-5">February 8, 2019</p>
+              <p className="title is-5">May 2, 2020</p>
             </div>
           </div>
           <div className="level-item has-text-centered">
@@ -90,10 +90,10 @@ const TestDriveCourse = ({ data }) => (
               </p>
 
               <p>
-                Classes are for two hours, twice a week (as scheduled) at 6:30
-                p.m. Optional lab time generally begins at 5:30 p.m. The course
-                is taught <strong>in-person</strong>, on our campus at 2220
-                Central Ave, St. Petersburg, Florida.
+                Classes are once week (as scheduled) at 10:00 a.m. Optional lab
+                time generally begins at 3:00 p.m. The course is taught{' '}
+                <strong>in-person</strong>, on our campus at 2220 Central Ave,
+                St. Petersburg, Florida.
               </p>
 
               <p>
