@@ -15,55 +15,60 @@ const Units = [
     modules: []
   },
   {
-    name: 'Fundamentals',
-    link: 'curriculum/fundamentals',
-    modules: [
-      {
-        name: 'HTML and CSS',
-        lessons: [
-          {
-            name: 'Intro To HTML',
-            link: 'modules/html-css/lessons/intro-to-html/'
-          },
-          {
-            name: 'Intro To CSS',
-            link: 'modules/html-css/lessons/intro-to-css'
-          },
-          {
-            name: 'CSS Layout',
-            link: 'modules/html-css/lessons/css-layout'
-          },
-          {
-            name: 'Intro to Responsive Web',
-            link: 'modules/html-css/lessons/intro-to-responsive'
-          }
-        ]
-      },
-      {
-        name: 'JavaScript',
-        lessons: [
-          {
-            name: 'Welcome To Javascript',
-            link: 'modules/javascript/lessons/welcome-to-javascript'
-          },
-          {
-            name: 'JavaScript Basics',
-            link: 'modules/javascript/lessons/javascript-basics'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    name: 'Front-end',
-    link: 'curriculum/front-end',
-    modules: []
-  },
-  {
-    name: 'Full-stack',
-    link: 'curriculum/back-end',
+    name: 'unit-i: fundamentals',
+    link: 'curriculum/unit-i',
     modules: []
   }
+  // {
+  //   name: 'Fundamentals',
+  //   link: 'curriculum/fundamentals',
+  //   modules: [
+  //     {
+  //       name: 'HTML and CSS',
+  //       lessons: [
+  //         {
+  //           name: 'Intro To HTML',
+  //           link: 'modules/html-css/lessons/intro-to-html/'
+  //         },
+  //         {
+  //           name: 'Intro To CSS',
+  //           link: 'modules/html-css/lessons/intro-to-css'
+  //         },
+  //         {
+  //           name: 'CSS Layout',
+  //           link: 'modules/html-css/lessons/css-layout'
+  //         },
+  //         {
+  //           name: 'Intro to Responsive Web',
+  //           link: 'modules/html-css/lessons/intro-to-responsive'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       name: 'JavaScript',
+  //       lessons: [
+  //         {
+  //           name: 'Welcome To Javascript',
+  //           link: 'modules/javascript/lessons/welcome-to-javascript'
+  //         },
+  //         {
+  //           name: 'JavaScript Basics',
+  //           link: 'modules/javascript/lessons/javascript-basics'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: 'Front-end',
+  //   link: 'curriculum/front-end',
+  //   modules: []
+  // },
+  // {
+  //   name: 'Full-stack',
+  //   link: 'curriculum/back-end',
+  //   modules: []
+  // }
 ]
 
 const HandbookLayout = ({ children }) => (
