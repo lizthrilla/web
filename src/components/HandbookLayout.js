@@ -15,7 +15,7 @@ const Units = [
     modules: []
   },
   {
-    name: 'unit-i: fundamentals',
+    name: 'Unit I: Programming Fundamentals',
     link: 'curriculum/unit-i',
     modules: []
   }
