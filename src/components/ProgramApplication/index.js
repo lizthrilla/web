@@ -261,7 +261,7 @@ class ProgramApplication extends Component {
                   <input
                     type="text"
                     className="input"
-                    name="given`_name"
+                    name="given_name"
                     value={this.state.contact.given_name}
                     onChange={this.updateContact}
                   />
