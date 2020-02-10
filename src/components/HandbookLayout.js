@@ -18,6 +18,11 @@ const Units = [
     name: 'Unit I: Programming Fundamentals',
     link: 'curriculum/unit-i',
     modules: []
+  },
+  {
+    name: '.NET Notes',
+    link: '/curriculum/back-end/full-stack-i/lecture/dotnet',
+    modules: []
   }
   // {
   //   name: 'Fundamentals',
