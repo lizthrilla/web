@@ -11,11 +11,12 @@ const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
 
 class DiversityScholarship extends React.Component {
   state = {
-    name: '',
+    given_name: '',
+    family_name: '',
     email: '',
     phone: '',
     applied: false,
-    essay: '',
+    essay: ''
   }
 
   _update = event => {
@@ -23,7 +24,7 @@ class DiversityScholarship extends React.Component {
     const value = target.type === 'checkbox' ? target.checked : target.value
     const name = target.name
     this.setState({
-      [name]: value,
+      [name]: value
     })
   }
 
@@ -32,26 +33,27 @@ class DiversityScholarship extends React.Component {
     fetch(`${GATEWAY_API_URL}/apply`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'application/json; charset=utf-8'
       },
       body: JSON.stringify({
         program: 'diversity-scholarship',
-        full_name: this.state.name,
+        given_name: this.state.given_name,
+        family_name: this.state.family_name,
         email_address: this.state.email,
         phone_number: this.state.phone,
         application_status: 'complete',
         question_responses: {
           'I have applied for a program at the Academy at Suncoast Developers Guild.': this
             .state.applied,
-          'Why is diversity in technology important to you?': this.state.essay,
-        },
-      }),
+          'Why is diversity in technology important to you?': this.state.essay
+        }
+      })
     }).then(() => {
       if (window.ga) {
         ga('send', 'event', {
           eventCategory: 'Program Applications',
           eventAction: 'Submit',
-          eventLabel: 'Diversity Scholarship',
+          eventLabel: 'Diversity Scholarship'
         })
       }
       navigate('/thanks')
@@ -87,13 +89,25 @@ class DiversityScholarship extends React.Component {
             </div>
             <form onSubmit={this._submit}>
               <div className="field">
-                <label className="label">Full Name</label>
+                <label className="label">Given Name</label>
                 <div className="control">
                   <input
                     type="text"
                     name="name"
                     className="input"
-                    value={this.state.name}
+                    value={this.state.given_name}
+                    onChange={this._update}
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Family Name</label>
+                <div className="control">
+                  <input
+                    type="text"
+                    name="name"
+                    className="input"
+                    value={this.state.family_name}
                     onChange={this._update}
                   />
                 </div>

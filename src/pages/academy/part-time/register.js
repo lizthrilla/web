@@ -47,7 +47,8 @@ const PartTimeRegistration = () => {
 
   const [values, setValues] = useState({
     course: params.course || Object.keys(COURSES)[0],
-    name: '',
+    givenName: '',
+    familyName: '',
     email: '',
     phone: '',
     code: '',
@@ -72,7 +73,8 @@ const PartTimeRegistration = () => {
         'Content-Type': 'application/json; charset=utf-8'
       },
       body: JSON.stringify({
-        full_name: values.name,
+        given_name: values.givenName,
+        family_name: values.familyName,
         email_address: values.email,
         phone_number: values.phone,
         code: values.code,
@@ -91,7 +93,8 @@ const PartTimeRegistration = () => {
   }
 
   const validateValues = () => {
-    if (values.name.length < 1) return false
+    if (values.givenName.length < 1) return false
+    if (values.familyName.length < 1) return false
     if (values.phone.length < 1) return false
     if (!/^\S+@\S+$/.test(values.email)) return false
     if (!values.acceptPolicy) return false
@@ -127,13 +130,25 @@ const PartTimeRegistration = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Full Name</label>
+              <label className="label">Given Name</label>
               <div className="control">
                 <input
                   type="text"
-                  name="name"
+                  name="givenName"
                   className="input"
-                  value={values.name}
+                  value={values.givenName}
+                  onChange={onChange}
+                />
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Family Name</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="familyName"
+                  className="input"
+                  value={values.familyName}
                   onChange={onChange}
                 />
               </div>
