@@ -20,35 +20,42 @@ const Units = [
     modules: []
   },
   {
-    name: '.NET Notes',
-    link: '/curriculum/back-end/full-stack-i/lecture/dotnet',
+    name: 'Unit II: Front end development',
+    link: 'curriculum/unit-ii',
     modules: []
+  },
+  {
+    name: '.NET Notes',
+    link: 'curriculum/back-end/full-stack-i/lecture/dotnet',
+    modules: []
+  },
+  {
+    name: 'Web Fundamentals',
+    link: 'curriculum/fundamentals',
+    modules: [
+      {
+        name: 'HTML and CSS',
+        lessons: [
+          {
+            name: 'Intro To HTML',
+            link: 'modules/html-css/lessons/intro-to-html/'
+          },
+          {
+            name: 'Intro To CSS',
+            link: 'modules/html-css/lessons/intro-to-css'
+          }
+          // {
+          //   name: 'CSS Layout',
+          //   link: 'modules/html-css/lessons/css-layout'
+          // },
+          // {
+          //   name: 'Intro to Responsive Web',
+          //   link: 'modules/html-css/lessons/intro-to-responsive'
+          // }
+        ]
+      }
+    ]
   }
-  // {
-  //   name: 'Fundamentals',
-  //   link: 'curriculum/fundamentals',
-  //   modules: [
-  //     {
-  //       name: 'HTML and CSS',
-  //       lessons: [
-  //         {
-  //           name: 'Intro To HTML',
-  //           link: 'modules/html-css/lessons/intro-to-html/'
-  //         },
-  //         {
-  //           name: 'Intro To CSS',
-  //           link: 'modules/html-css/lessons/intro-to-css'
-  //         },
-  //         {
-  //           name: 'CSS Layout',
-  //           link: 'modules/html-css/lessons/css-layout'
-  //         },
-  //         {
-  //           name: 'Intro to Responsive Web',
-  //           link: 'modules/html-css/lessons/intro-to-responsive'
-  //         }
-  //       ]
-  //     },
   //     {
   //       name: 'JavaScript',
   //       lessons: [
@@ -64,16 +71,6 @@ const Units = [
   //     }
   //   ]
   // },
-  // {
-  //   name: 'Front-end',
-  //   link: 'curriculum/front-end',
-  //   modules: []
-  // },
-  // {
-  //   name: 'Full-stack',
-  //   link: 'curriculum/back-end',
-  //   modules: []
-  // }
 ]
 
 const HandbookLayout = ({ children }) => (
