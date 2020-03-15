@@ -43,34 +43,45 @@ const Units = [
           {
             name: 'Intro To CSS',
             link: 'modules/html-css/lessons/intro-to-css'
+          },
+          {
+            name: 'CSS Layout',
+            link: 'modules/html-css/lessons/css-layout'
+          },
+          {
+            name: 'Intro to Responsive Web',
+            link: 'modules/html-css/lessons/intro-to-responsive'
           }
-          // {
-          //   name: 'CSS Layout',
-          //   link: 'modules/html-css/lessons/css-layout'
-          // },
-          // {
-          //   name: 'Intro to Responsive Web',
-          //   link: 'modules/html-css/lessons/intro-to-responsive'
-          // }
         ]
       }
     ]
+  },
+  {
+    name: 'JavaScript',
+    lessons: [
+      {
+        name: 'Welcome To Javascript',
+        link: 'modules/javascript/lessons/welcome-to-javascript'
+      },
+      {
+        name: 'JavaScript Basics',
+        link: 'modules/javascript/lessons/javascript-basics'
+      }
+    ]
+  },
+  {
+    name: 'Distance Learning',
+    lessons: [
+      {
+        name: 'Daily Schedule',
+        link: 'curriculum/daily-life/distance/daily-schedule'
+      },
+      {
+        name: 'Tips and Tricks',
+        link: 'curriculum/daily-life/distance/communication-tips'
+      }
+    ]
   }
-  //     {
-  //       name: 'JavaScript',
-  //       lessons: [
-  //         {
-  //           name: 'Welcome To Javascript',
-  //           link: 'modules/javascript/lessons/welcome-to-javascript'
-  //         },
-  //         {
-  //           name: 'JavaScript Basics',
-  //           link: 'modules/javascript/lessons/javascript-basics'
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // },
 ]
 
 const HandbookLayout = ({ children }) => (
