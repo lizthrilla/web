@@ -58,6 +58,7 @@ const Units = [
   },
   {
     name: 'JavaScript',
+    modules: [],
     lessons: [
       {
         name: 'Welcome To Javascript',
