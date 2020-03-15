@@ -156,6 +156,14 @@ const HandbookLayout = ({ children }) => (
                       </ul>
                     </li>
                     <li>
+                      <Link
+                        to="/handbook/curriculum/daily-life/distance"
+                        activeClassName="is-active"
+                      >
+                        Distance Learning
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/handbook/career" activeClassName="is-active">
                         Career Support
                       </Link>
