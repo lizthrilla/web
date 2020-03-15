@@ -53,20 +53,19 @@ const Units = [
             link: 'modules/html-css/lessons/intro-to-responsive'
           }
         ]
-      }
-    ]
-  },
-  {
-    name: 'JavaScript',
-    modules: [],
-    lessons: [
-      {
-        name: 'Welcome To Javascript',
-        link: 'modules/javascript/lessons/welcome-to-javascript'
       },
       {
-        name: 'JavaScript Basics',
-        link: 'modules/javascript/lessons/javascript-basics'
+        name: 'JavaScript',
+        lessons: [
+          {
+            name: 'Welcome To Javascript',
+            link: 'modules/javascript/lessons/welcome-to-javascript'
+          },
+          {
+            name: 'JavaScript Basics',
+            link: 'modules/javascript/lessons/javascript-basics'
+          }
+        ]
       }
     ]
   }
