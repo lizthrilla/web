@@ -11,7 +11,7 @@ const AcademyIndex = () => (
     <AcademyNavigation />
     <Section>
       <Container>
-        <PageTitle>Web Development Program Application</PageTitle>
+        <PageTitle>Web Development Program Inquiry</PageTitle>
         <ProgramApplication />
       </Container>
     </Section>

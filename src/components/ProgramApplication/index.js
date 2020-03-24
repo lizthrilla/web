@@ -6,10 +6,9 @@ import Link from 'gatsby-link'
 import QUESTIONS from './questions'
 import Steps from './Steps'
 import Question from './Question'
-import Calendly from '../Calendly'
 import Icon from '../Icon'
 
-const LAST_STEP = 3
+const LAST_STEP = 1
 
 const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
 
@@ -310,18 +309,15 @@ class ProgramApplication extends Component {
                   nor any obligation to join the program.
                 </p>
                 <p>
-                  Filling out the application will get you fast-tracked to
-                  meeting with someone on our team to see if the Web Development
-                  Program is a good fit for you. This application should take
-                  15-30 minutes. Please be honest with yourself and with us.{' '}
+                  Filling out this inquiry will get you fast-tracked to meeting
+                  with someone on our team to see if the Web Development Program
+                  is a good fit for you.
                   <strong>
                     The next step will be an interview with our team.
                   </strong>{' '}
-                  You'll have the opportunity to schedule it immediately at the
-                  end of this application.
                 </p>
                 <p>
-                  <strong>Notice:</strong> By continuing with this application,
+                  <strong>Notice:</strong> By continuing with this submission,
                   you agree to the terms of our{' '}
                   <Link to="/privacy">Privacy Policy</Link> and{' '}
                   <Link to="/terms">Terms of Service</Link>. We'll follow-up
@@ -329,7 +325,7 @@ class ProgramApplication extends Component {
                 </p>
                 <div className="message is-primary">
                   <p className="message-body">
-                    This is an application for our{' '}
+                    This is an inquiry for our{' '}
                     <strong>full-time immersive</strong> web development program
                     . If you're interested in after hours learning, you can
                     register for our{' '}
@@ -339,7 +335,7 @@ class ProgramApplication extends Component {
               </div>
             </>
           )}
-          {step > 0 && step < 4 && (
+          {step > 0 && step < 2 && (
             <>
               {QUESTIONS[step].map((question, index) => (
                 <Question
@@ -352,19 +348,29 @@ class ProgramApplication extends Component {
               ))}
             </>
           )}
-          {step === 4 && (
+          {step === 2 && (
             <>
               <div className="content">
                 <h3>Hey, you're all done!</h3>
                 <p>
-                  Thanks for completing this application;{' '}
+                  Thanks for submitting an inquiry about our program;{' '}
                   <em>that was easy right?</em>
                 </p>
                 <p>
                   Your <strong>next step is a casual interview</strong> where
                   you to get to learn more about the program and we can answer
-                  any questions you may have. Our enrollment specialist will
-                  reach out to you to schedule your interview.
+                  any questions you may have.{' '}
+                  <em>
+                    Our enrollment specialist will reach out to you to schedule
+                    your interview.
+                  </em>
+                </p>
+                <p>
+                  If you have not already, see if you're eligible for any of{' '}
+                  <Link to="/academy/tuition/scholarships">
+                    our scholarships
+                  </Link>
+                  .
                 </p>
               </div>
             </>

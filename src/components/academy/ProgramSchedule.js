@@ -12,31 +12,15 @@ const ProgramSchedule = () => (
             <th>Status</th>
             <th>Classes Start</th>
             <th>Graduation / Demo Day</th>
-            <th>Back-end</th>
+            <th>Back-end Focus</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Cohort 16</td>
-            <td>
-              <em>In Progress</em>
-            </td>
-            <td>October 28, 2019</td>
-            <td>January 31, 2020</td>
-            <td>.NET</td>
-          </tr>
           <tr className="upcoming">
-            <td>Cohort 17</td>
+            <td>Cohort 18</td>
             <td>
               <Link to="/academy/apply">Now Enrolling</Link>
             </td>
-            <td>February 10, 2020</td>
-            <td>May 1, 2020</td>
-            <td>.NET</td>
-          </tr>
-          <tr>
-            <td>Cohort 18</td>
-            <td>"</td>
             <td>May 11, 2020</td>
             <td>July 31, 2020</td>
             <td>.NET</td>

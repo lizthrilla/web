@@ -10,12 +10,6 @@ const Steps = ({ step }) => (
       <li className={cx({ complete: step > 1, current: step === 1 })}>
         Program Start
       </li>
-      <li className={cx({ complete: step > 2, current: step === 2 })}>
-        Your Background
-      </li>
-      <li className={cx({ complete: step > 3, current: step === 3 })}>
-        Just a Bit More
-      </li>
       <li className={cx({ complete: step > 4, current: step === 4 })}>
         All Done!
       </li>
