@@ -78,8 +78,8 @@ class HeroAward extends React.Component {
               <ul>
                 <li>
                   This opportunity is available to members (or the spouses,
-                  partners, parents, and children) of the veterans or
-                  active-duty military, first responders, law enforcement, and
+                  partners, parents, and children) of military veterans (or
+                  active-duty), first responders, law enforcement, and school
                   teachers.
                 </li>
                 <li>
