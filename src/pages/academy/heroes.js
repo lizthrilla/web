@@ -90,11 +90,11 @@ class HeroAward extends React.Component {
             </div>
             <form onSubmit={this._submit}>
               <div className="field">
-                <label className="label">Given Name</label>
+                <label className="label">First Name</label>
                 <div className="control">
                   <input
                     type="text"
-                    name="name"
+                    name="given_name"
                     className="input"
                     value={this.state.given_name}
                     onChange={this._update}
@@ -102,11 +102,11 @@ class HeroAward extends React.Component {
                 </div>
               </div>
               <div className="field">
-                <label className="label">Family Name</label>
+                <label className="label">Last Name</label>
                 <div className="control">
                   <input
                     type="text"
-                    name="name"
+                    name="family_name"
                     className="input"
                     value={this.state.family_name}
                     onChange={this._update}
