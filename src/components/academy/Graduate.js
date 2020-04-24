@@ -1,9 +1,18 @@
 import React from 'react'
 import Image from 'gatsby-image'
+import Link from 'gatsby-link'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Icon from '../../components/Icon'
+import GraduateSocialLinks from './GraduateSocialLinks'
 
-const Graduate = ({ student, description, tagLine, hireable }) => (
+const Graduate = ({
+  student,
+  description,
+  tagLine,
+  hireable,
+  slug,
+  cohortSlug
+}) => (
   <React.Fragment>
     <div className="columns demo-day-graduate">
       <div className="column is-narrow has-text-centered">
@@ -17,70 +26,26 @@ const Graduate = ({ student, description, tagLine, hireable }) => (
         )}
       </div>
       <div className="column">
-        <h4 className="title is-4">{student.name}</h4>
+        <h4 className="title is-4">
+          {slug ? (
+            <Link to={`/demo-day/${cohortSlug}/${slug}`}>{student.name}</Link>
+          ) : (
+            student.name
+          )}
+        </h4>
         <h5
           className="subtitle is-5"
           dangerouslySetInnerHTML={{
-            __html: tagLine,
+            __html: tagLine
           }}
         />
         <div
           className="content"
           dangerouslySetInnerHTML={{
-            __html: description ? description.childMarkdownRemark.html : '',
+            __html: description ? description.childMarkdownRemark.html : ''
           }}
         />
-        <nav className="level">
-          <div className="level-left">
-            {hireable && (
-              <p className="level-item">
-                <span className="tag is-primary">Availble for Hire</span>
-              </p>
-            )}
-          </div>
-          <div className="level-right">
-            <div className="level-item social-links">
-              {student.github && (
-                <OutboundLink href={`https://github.com/${student.github}`}>
-                  <Icon i="fab fa-github fa-lg" />
-                </OutboundLink>
-              )}
-              {student.portfolioUrl && (
-                <OutboundLink href={student.portfolioUrl}>
-                  <Icon i="fas fa-suitcase fa-lg" />
-                </OutboundLink>
-              )}
-              {student.email && (
-                <OutboundLink href={`mailto:${student.email}`}>
-                  <Icon i="fas fa-envelope fa-lg" />
-                </OutboundLink>
-              )}
-              {student.linkedIn && (
-                <OutboundLink
-                  href={`https://www.linkedin.com/in/${student.linkedIn}/`}
-                >
-                  <Icon i="fab fa-linkedin fa-lg" />
-                </OutboundLink>
-              )}
-              {student.twitter && (
-                <OutboundLink href={`https://twitter.com/${student.twitter}`}>
-                  <Icon i="fab fa-twitter fa-lg" />
-                </OutboundLink>
-              )}
-              {student.blogUrl && (
-                <OutboundLink href={student.blogUrl}>
-                  <Icon
-                    i={
-                      student.blogUrl.includes('medium.com')
-                        ? 'fab fa-medium fa-lg'
-                        : 'fas fa-blog fa-lg'
-                    }
-                  />
-                </OutboundLink>
-              )}
-            </div>
-          </div>
-        </nav>
+        <GraduateSocialLinks student={student} hireable={hireable} />
       </div>
     </div>
     <hr />

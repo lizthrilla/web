@@ -9,6 +9,7 @@ import PageTitle from '../../components/PageTitle'
 import Graduate from './Graduate'
 
 const Cohort = ({
+  slug,
   title,
   date,
   cohortLogo,
@@ -16,7 +17,7 @@ const Cohort = ({
   sponsorLogo,
   sponsorText,
   thankYou,
-  thankYouImage,
+  thankYouImage
 }) => {
   return (
     <>
@@ -62,7 +63,7 @@ const Cohort = ({
           <h3 className="title is-3">Our Graduates</h3>
 
           {demo_day_graduate.map(grad => (
-            <Graduate {...grad} key={grad.student.name} />
+            <Graduate {...grad} cohortSlug={slug} key={grad.student.name} />
           ))}
         </Container>
       </Section>
@@ -74,7 +75,7 @@ const Cohort = ({
                 <div
                   className="content"
                   dangerouslySetInnerHTML={{
-                    __html: thankYou.childMarkdownRemark.html,
+                    __html: thankYou.childMarkdownRemark.html
                   }}
                 />
                 <Image
@@ -91,7 +92,7 @@ const Cohort = ({
                 <div
                   className="content"
                   dangerouslySetInnerHTML={{
-                    __html: sponsorText.childMarkdownRemark.html,
+                    __html: sponsorText.childMarkdownRemark.html
                   }}
                 />
                 <Image
@@ -114,6 +115,7 @@ export const DemoDayCohortFragment = graphql`
     title
     date
     sponsorUrl
+    slug
     cohortLogo {
       file {
         url
@@ -133,6 +135,7 @@ export const DemoDayCohortFragment = graphql`
     demo_day_graduate {
       tagLine
       hireable
+      slug
       description {
         childMarkdownRemark {
           html

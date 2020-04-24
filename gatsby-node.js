@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
     const successStory = path.resolve('./src/templates/success-story.js')
     const demoDayTemplate = path.resolve('./src/templates/demo-day.js')
+    const graduateTemplate = path.resolve('./src/templates/graduate.js')
     resolve(
       graphql(
         `
@@ -31,7 +32,12 @@ exports.createPages = ({ graphql, actions }) => {
             allContentfulDemoDay {
               edges {
                 node {
+                  contentful_id
                   slug
+                  demo_day_graduate {
+                    contentful_id
+                    slug
+                  }
                 }
               }
             }
@@ -55,8 +61,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/blog/${post.node.slug}/`,
             component: blogPost,
             context: {
-              slug: post.node.slug,
-            },
+              slug: post.node.slug
+            }
           })
         })
 
@@ -66,8 +72,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/academy/success/${story.node.slug}/`,
             component: successStory,
             context: {
-              slug: story.node.slug,
-            },
+              slug: story.node.slug
+            }
           })
         })
 
@@ -77,8 +83,20 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/demo-day/${demoDay.slug}/`,
             component: demoDayTemplate,
             context: {
-              slug: demoDay.slug,
-            },
+              slug: demoDay.slug
+            }
+          })
+          demoDay.demo_day_graduate.forEach(graduate => {
+            if (graduate.slug) {
+              createPage({
+                path: `/demo-day/${demoDay.slug}/${graduate.slug}`,
+                component: graduateTemplate,
+                context: {
+                  demoDayId: demoDay.contentful_id,
+                  graduateId: graduate.contentful_id
+                }
+              })
+            }
           })
         })
 
@@ -87,31 +105,31 @@ exports.createPages = ({ graphql, actions }) => {
             case 'Staff':
               createPage({
                 path: `/team/${node.slug}/`,
-                component: path.resolve('./src/pages/team/index.js'),
+                component: path.resolve('./src/pages/team/index.js')
               })
               break
             case 'Advisory Board':
               createPage({
                 path: `/team/advisory/${node.slug}/`,
-                component: path.resolve('./src/pages/team/advisory.js'),
+                component: path.resolve('./src/pages/team/advisory.js')
               })
               break
             case 'Alumni Committee':
               createPage({
                 path: `/team/alumni/${node.slug}/`,
-                component: path.resolve('./src/pages/team/alumni.js'),
+                component: path.resolve('./src/pages/team/alumni.js')
               })
               break
             case 'Board Member':
               createPage({
                 path: `/team/board/${node.slug}/`,
-                component: path.resolve('./src/pages/team/board.js'),
+                component: path.resolve('./src/pages/team/board.js')
               })
               break
             case 'Volunteer':
               createPage({
                 path: `/team/volunteers/${node.slug}/`,
-                component: path.resolve('./src/pages/team/volunteers.js'),
+                component: path.resolve('./src/pages/team/volunteers.js')
               })
               break
             default:
