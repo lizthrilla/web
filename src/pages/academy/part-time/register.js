@@ -130,7 +130,7 @@ const PartTimeRegistration = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Given Name</label>
+              <label className="label">First Name</label>
               <div className="control">
                 <input
                   type="text"
@@ -142,7 +142,7 @@ const PartTimeRegistration = () => {
               </div>
             </div>
             <div className="field">
-              <label className="label">Family Name</label>
+              <label className="label">Last Name</label>
               <div className="control">
                 <input
                   type="text"

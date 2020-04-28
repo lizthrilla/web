@@ -255,7 +255,7 @@ class ProgramApplication extends Component {
           {step === 0 && (
             <>
               <div className="field">
-                <label className="label">Given Name</label>
+                <label className="label">First Name</label>
                 <p className="control">
                   <input
                     type="text"
@@ -267,7 +267,7 @@ class ProgramApplication extends Component {
                 </p>
               </div>
               <div className="field">
-                <label className="label">Family Name</label>
+                <label className="label">Last Name</label>
                 <p className="control">
                   <input
                     type="text"
