@@ -119,6 +119,14 @@ const Footer = () => (
                 <NavLink to="/handbook">Handbook</NavLink>
               </li>
             </ul>
+            <div className="content">
+              <p>
+                This site is powered by{' '}
+                <OutboundLink href="https://www.netlify.com">
+                  Netlify
+                </OutboundLink>
+              </p>
+            </div>
           </aside>
         </div>
       </div>
