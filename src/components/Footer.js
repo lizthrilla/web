@@ -62,6 +62,7 @@ const Footer = () => (
               <OutboundLink href="https://www.netlify.com">
                 Netlify
               </OutboundLink>
+              .
             </p>
           </div>
         </div>

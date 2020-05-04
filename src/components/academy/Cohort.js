@@ -55,8 +55,8 @@ const Cohort = ({
 
             <h3>Interested in taking classes or learning more?</h3>
             <p>
-              We are now accepting applications for our next cohort begining
-              April 29th. <Link to="/academy">Find out more.</Link>
+              We are now accepting applications for our next cohort begining May
+              11, 2020. <Link to="/academy">Find out more.</Link>
             </p>
           </div>
 
