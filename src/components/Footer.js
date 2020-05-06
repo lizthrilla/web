@@ -125,7 +125,7 @@ const Footer = () => (
                 <NavLink to="/press">Press</NavLink>
               </li>
               <li>
-                <NavLink to="/handbook">Handbook</NavLink>
+                <a href="https://handbook.suncoast.io">Handbook</a>
               </li>
             </ul>
           </aside>

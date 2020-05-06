@@ -42,18 +42,6 @@ module.exports = {
         icon: 'src/images/icon.png'
       }
     },
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          '@handbook': require('path').resolve(
-            __dirname,
-            'src/pages/handbook/.components'
-          )
-        },
-        extensions: []
-      }
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
@@ -99,9 +87,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         extensions: ['.mdx', '.md'],
-        defaultLayouts: {
-          handbook: require.resolve('./src/components/HandbookLayout.js')
-        },
+        defaultLayouts: {},
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-copy-linked-files'
@@ -120,14 +106,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         ignore: [`**/.*`, `**/.*/**`, `**/node_modules/**`]
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'handbook',
-        path: `${__dirname}/src/pages/handbook`,
-        ignore: [`**/.*`, `**/.*/**`] // ignore files starting with a dot
       }
     },
     {
