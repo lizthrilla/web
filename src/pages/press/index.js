@@ -3,8 +3,6 @@ import Layout from '../../components/Layout'
 import Section from '../../components/Section'
 import Container from '../../components/Container'
 import Link from 'gatsby-link'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { withPrefix } from 'gatsby'
 
 const PressPage = () => (
   <Layout>
@@ -20,6 +18,17 @@ const PressPage = () => (
     </section>
     <Section>
       <Container>
+        <article className="media">
+          <div className="media-content">
+            <strong>
+              <Link to="/press/2020-summer-hackathon">
+                SDG Summer Solstice Hackathon: Celebrating the Resilient Spirit
+                of Developers and Tampa Bay
+              </Link>
+            </strong>
+          </div>
+          <div className="media-right">June 4, 2020</div>
+        </article>
         <article className="media">
           <div className="media-content">
             <strong>
