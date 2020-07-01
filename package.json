@@ -39,7 +39,7 @@
     "mdx-utils": "0.2.0",
     "node-sass": "4.13.0",
     "prism-react-renderer": "1.0.2",
-    "prismjs": "1.18.0",
+    "prismjs": "1.20.0",
     "re-carousel": "2.4.0",
     "react": "16.13.1",
     "react-copy-to-clipboard": "^5.0.2",
