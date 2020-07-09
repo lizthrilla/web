@@ -15,7 +15,7 @@
   to = "https://suncoast.io/demo-day"
 
 [[redirects]]
-  from = "/conference"
-  to = "https://sdg-conf.netlify.app/"
+  from = "/conference/*"
+  to = "https://sdg-conf.netlify.app/:splat"
   status = 200
   force = true
