@@ -21,6 +21,16 @@ const PressPage = () => (
         <article className="media">
           <div className="media-content">
             <strong>
+              <Link to="/press/2020-summer-conference">
+                Suncoast Developers Conference - Summer 2020
+              </Link>
+            </strong>
+          </div>
+          <div className="media-right">July 20, 2020</div>
+        </article>
+        <article className="media">
+          <div className="media-content">
+            <strong>
               <Link to="/press/2020-summer-hackathon">
                 SDG Summer Solstice Hackathon: Celebrating the Resilient Spirit
                 of Developers and Tampa Bay
