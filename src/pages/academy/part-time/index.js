@@ -20,7 +20,7 @@ const CourseListing = ({
   month,
   days,
   time,
-  tbd
+  tbd,
 }) => (
   <article className="columns">
     <div className="column">
@@ -37,7 +37,7 @@ const CourseListing = ({
             <Link to={path}>{title}</Link>
           </h3>
           <div className="subtitle tags">
-            {tags.map(tag => (
+            {tags.map((tag) => (
               <span className="tag" key={tag}>
                 {tag}
               </span>
@@ -72,7 +72,7 @@ const CourseListing = ({
                   <span className="day">{day}</span>
                 </div>
                 <div>
-                  {days.map(day => (
+                  {days.map((day) => (
                     <React.Fragment key={day}>
                       <span className="tag">{day}</span>{' '}
                     </React.Fragment>
@@ -118,8 +118,8 @@ const PartTimeCourses = () => (
           title="Web Development Test Drive"
           image={wdtd}
           path="/academy/part-time/test-drive"
-          month="March"
-          day={28}
+          month="September"
+          day={19}
           days={['Sat']}
           tags={['6-WEEKS', 'BEGINNER']}
           time="10:00 a.m. - 3:00 p.m."

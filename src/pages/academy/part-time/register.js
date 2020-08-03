@@ -23,13 +23,13 @@ const COURSES = {
   //   end: '2019-04-20',
   // },
   wdtd: {
-    session: 'Winter Session 2020',
+    session: 'Fall Session 2020',
     name: 'Web Development Test Drive',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2020-03-28',
-    end: '2020-05-02'
-  }
+    start: '2020-09-19',
+    end: '2020-10-24',
+  },
   // rbiw: {
   //   session: 'Summer Session',
   //   name: 'React I: Building Interactive Websites',
@@ -52,10 +52,10 @@ const PartTimeRegistration = () => {
     email: '',
     phone: '',
     code: '',
-    acceptPolicy: false
+    acceptPolicy: false,
   })
 
-  const onChange = event => {
+  const onChange = (event) => {
     const target = event.target
     const name = target.name
     let value = target.type === 'checkbox' ? target.checked : target.value
@@ -65,12 +65,12 @@ const PartTimeRegistration = () => {
     setValues({ ...values, [name]: value })
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     fetch(`${GATEWAY_API_URL}/api/register`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json; charset=utf-8'
+        'Content-Type': 'application/json; charset=utf-8',
       },
       body: JSON.stringify({
         given_name: values.givenName,
@@ -78,14 +78,14 @@ const PartTimeRegistration = () => {
         email_address: values.email,
         phone_number: values.phone,
         code: values.code,
-        course: values.course
-      })
+        course: values.course,
+      }),
     }).then(() => {
       if (window.ga) {
         ga('send', 'event', {
           eventCategory: 'Course Registration',
           eventAction: 'Submit',
-          eventLabel: COURSES[values.course].name
+          eventLabel: COURSES[values.course].name,
         })
       }
       navigate('/thanks')
@@ -120,7 +120,7 @@ const PartTimeRegistration = () => {
                     value={values.course}
                     onChange={onChange}
                   >
-                    {Object.keys(COURSES).map(key => (
+                    {Object.keys(COURSES).map((key) => (
                       <option value={key} key={key}>
                         {COURSES[key].name} ({COURSES[key].session})
                       </option>
