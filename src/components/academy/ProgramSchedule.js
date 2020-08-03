@@ -17,20 +17,20 @@ const ProgramSchedule = () => (
         </thead>
         <tbody>
           <tr className="upcoming">
-            <td>Cohort 18</td>
+            <td>Cohort 19</td>
             <td>
               <Link to="/academy/apply">Now Enrolling</Link>
             </td>
-            <td>May 11, 2020</td>
-            <td>July 31, 2020</td>
+            <td>August 10, 2020</td>
+            <td>November 13, 2020</td>
             <td>.NET</td>
           </tr>
           <tr>
-            <td>Cohort 19</td>
+            <td>Cohort 20</td>
             <td>"</td>
-            <td>August 10, 2020</td>
-            <td>November 2020</td>
-            <td>TBD</td>
+            <td>January 2021</td>
+            <td>April 2021</td>
+            <td>"</td>
           </tr>
         </tbody>
       </table>
