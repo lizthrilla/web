@@ -95,28 +95,6 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
-          <div className="column">
-            <div className="columns is-vcentered is-mobile">
-              <div className="column is-narrow">
-                <figure className="image is-128x128">
-                  <img src={swag} alt="Sweet Swag" />
-                </figure>
-              </div>
-              <div className="column content">
-                <p>
-                  Get shirts, stickers and other stunning swag from our store.
-                </p>
-                <p>
-                  <Link
-                    href="http://store.suncoast.io/"
-                    className="button is-primary"
-                  >
-                    Shop Now
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
         <hr />
       </div>
