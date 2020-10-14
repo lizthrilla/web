@@ -1,0 +1,7 @@
+{
+  "name": "gatsby-source-gateway",
+  "private": true,
+  "dependencies": {
+    "got": "^11.7.0"
+  }
+}

@@ -4,7 +4,7 @@ const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = 'https://suncoast.io',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env
 
 const isNetlifyProduction = NETLIFY_ENV === 'production'
@@ -15,20 +15,14 @@ module.exports = {
     title: 'Suncoast Developers Guild',
     description:
       'An immersive code school in Tampa Bay, Suncoast Developers Guild serves people, not profit. We are changing lives and teaching people to be the best software developers they can be.',
-    siteUrl
+    siteUrl,
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-120953554-1'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-facebook-pixel',
-      options: {
-        pixelId: '251940662322499'
-      }
+        trackingId: 'UA-120953554-1',
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',
@@ -39,24 +33,25 @@ module.exports = {
         background_color: '#80ced2',
         theme_color: '#85577e',
         display: 'browser',
-        icon: 'src/images/icon.png'
-      }
+        icon: 'src/images/icon.png',
+      },
     },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `press`,
-        path: `${__dirname}/src/pages/press`
-      }
+        path: `${__dirname}/src/pages/press`,
+      },
     },
+    'gatsby-source-gateway',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
@@ -68,20 +63,20 @@ module.exports = {
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
-            policy: [{ userAgent: '*' }]
+            policy: [{ userAgent: '*' }],
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
+            host: null,
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
-            host: null
-          }
-        }
-      }
+            host: null,
+          },
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
@@ -90,32 +85,32 @@ module.exports = {
         defaultLayouts: {},
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-copy-linked-files'
+            resolve: 'gatsby-remark-copy-linked-files',
           },
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1035
-            }
-          }
-        ]
-      }
+              maxWidth: 1035,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`**/.*`, `**/.*/**`, `**/node_modules/**`]
-      }
+        ignore: [`**/.*`, `**/.*/**`, `**/node_modules/**`],
+      },
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp'
-  ]
+    'gatsby-transformer-sharp',
+  ],
 }

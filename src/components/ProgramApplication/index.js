@@ -15,7 +15,7 @@ const GATEWAY_API_URL = process.env.GATSBY_GATEWAY_API_URL
 class ProgramApplication extends Component {
   constructor() {
     super()
-    const questions = _.flatten(QUESTIONS).map(q => q.question)
+    const questions = _.flatten(QUESTIONS).map((q) => q.question)
     this.scrollRef = React.createRef()
     this.state = {
       loading: false,
@@ -24,10 +24,11 @@ class ProgramApplication extends Component {
         given_name: '',
         family_name: '',
         email_address: '',
-        phone_number: ''
+        phone_number: '',
       },
       step: 0,
-      responses: _.zipObject(questions, Array(questions.length).fill(''))
+      expiry: new Date().getTime() + 604800000,
+      responses: _.zipObject(questions, Array(questions.length).fill('')),
     }
   }
 
@@ -38,24 +39,21 @@ class ProgramApplication extends Component {
       this.setState({ step: 1 })
       fetch(`${GATEWAY_API_URL}/apply/${params.continue}`, {
         headers: {
-          'Content-Type': 'application/json; charset=utf-8'
-        }
+          'Content-Type': 'application/json; charset=utf-8',
+        },
       })
-        .then(r => r.json())
-        .then(applicationState => this.setState(applicationState))
+        .then((r) => r.json())
+        .then((applicationState) => this.setState(applicationState))
     } else {
       const frozenState = window.localStorage.getItem('application-state')
       if (frozenState && frozenState.length > 0) {
-        this.setState(JSON.parse(frozenState))
+        const thawedState = JSON.parse(frozenState)
+        if (new Date().getTime() > thawedState.expiry) {
+          this.setState(thawedState)
+        } else {
+          window.localStorage.removeItem('application-state')
+        }
       }
-    }
-
-    if (window.rdt) {
-      rdt('track', 'ViewContent')
-    }
-
-    if (window.fbq) {
-      fbq('track', 'ViewContent', { content_name: 'Program Application' })
     }
 
     this.updateApplicationInterval = setInterval(() => {
@@ -67,7 +65,7 @@ class ProgramApplication extends Component {
     clearInterval(this.updateApplicationInterval)
   }
 
-  continueApplication = async event => {
+  continueApplication = async (event) => {
     event.preventDefault()
 
     if (this.state.token) {
@@ -75,49 +73,24 @@ class ProgramApplication extends Component {
         await fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
           method: 'PATCH',
           headers: {
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
           body: JSON.stringify({
             question_responses: this.state.responses,
-            application_status: 'complete'
-          })
+            application_status: 'complete',
+          }),
         })
-        if (window.ga) {
-          ga('send', 'event', {
-            eventCategory: 'Program Applications',
-            eventAction: 'Submit',
-            eventLabel: 'Web Development'
-          })
-        }
-        if (window.rdt) {
-          rdt('track', 'Lead')
-        }
-        if (window.fbq) {
-          fbq('track', 'SubmitApplication', {
-            value: 745.0,
-            currency: 'USD'
-          })
-        }
-
-        if (window.twq) {
-          twq('track', 'Purchase', {
-            value: '745',
-            currency: 'USD',
-            num_items: '1'
-          })
-        }
-
         window.localStorage.removeItem('application-state')
       } else {
         fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
           method: 'PATCH',
           headers: {
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
           },
           body: JSON.stringify({
             ...this.state.contact,
-            question_responses: this.state.responses
-          })
+            question_responses: this.state.responses,
+          }),
         })
         window.localStorage.setItem(
           'application-state',
@@ -128,33 +101,13 @@ class ProgramApplication extends Component {
       const { id: token } = await fetch(`${GATEWAY_API_URL}/apply`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json; charset=utf-8'
+          'Content-Type': 'application/json; charset=utf-8',
         },
         body: JSON.stringify({
           program: 'web-development',
-          ...this.state.contact
-        })
-      }).then(response => response.json())
-      if (window.ga) {
-        ga('send', 'event', {
-          eventCategory: 'Program Applications',
-          eventAction: 'Begin',
-          eventLabel: 'Web Development'
-        })
-      }
-      if (window.rdt) {
-        rdt('track', 'AddToCart')
-      }
-      if (window.fbq) {
-        fbq('track', 'InitiateCheckout', {
-          value: 100.0,
-          currency: 'USD'
-        })
-        fbq('track', 'Lead', {
-          value: 14900.0,
-          currency: 'USD'
-        })
-      }
+          ...this.state.contact,
+        }),
+      }).then((response) => response.json())
       await this.setState({ token })
     }
 
@@ -169,9 +122,9 @@ class ProgramApplication extends Component {
       fetch(`${GATEWAY_API_URL}/apply/${this.state.token}`, {
         method: 'PATCH',
         headers: {
-          'Content-Type': 'application/json; charset=utf-8'
+          'Content-Type': 'application/json; charset=utf-8',
         },
-        body: JSON.stringify({ question_responses: this.state.responses })
+        body: JSON.stringify({ question_responses: this.state.responses }),
       })
       if (this.state.step !== LAST_STEP) {
         window.localStorage.setItem(
@@ -182,7 +135,7 @@ class ProgramApplication extends Component {
     }
   }
 
-  backtrackApplication = event => {
+  backtrackApplication = (event) => {
     event.preventDefault()
     this.setState({ step: Math.max(0, this.state.step - 1) })
     this.scrollToTop()
@@ -190,14 +143,14 @@ class ProgramApplication extends Component {
 
   setResponse = (question, answer) => {
     this.setState({
-      responses: update(this.state.responses, { [question]: { $set: answer } })
+      responses: update(this.state.responses, { [question]: { $set: answer } }),
     })
   }
 
-  updateContact = event => {
+  updateContact = (event) => {
     const { name, value } = event.target
     this.setState({
-      contact: update(this.state.contact, { [name]: { $set: value } })
+      contact: update(this.state.contact, { [name]: { $set: value } }),
     })
   }
 
@@ -213,7 +166,7 @@ class ProgramApplication extends Component {
           given_name,
           family_name,
           email_address,
-          phone_number
+          phone_number,
         } = this.state.contact
         return (
           given_name.length > 0 &&
@@ -223,8 +176,8 @@ class ProgramApplication extends Component {
         )
       default:
         return QUESTIONS[this.state.step]
-          .map(q => this.state.responses[q.question])
-          .every(answer => answer && answer.length > 0)
+          .map((q) => this.state.responses[q.question])
+          .every((answer) => answer && answer.length > 0)
     }
   }
 
@@ -251,7 +204,7 @@ class ProgramApplication extends Component {
             </div>
           </nav>
         )}
-        <form onSubmit={e => e.preventDefault()}>
+        <form onSubmit={(e) => e.preventDefault()}>
           {step === 0 && (
             <>
               <div className="field">

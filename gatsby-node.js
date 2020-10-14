@@ -120,12 +120,6 @@ exports.createPages = ({ graphql, actions }) => {
                 component: path.resolve('./src/pages/team/alumni.js')
               })
               break
-            case 'Board Member':
-              createPage({
-                path: `/team/board/${node.slug}/`,
-                component: path.resolve('./src/pages/team/board.js')
-              })
-              break
             case 'Volunteer':
               createPage({
                 path: `/team/volunteers/${node.slug}/`,

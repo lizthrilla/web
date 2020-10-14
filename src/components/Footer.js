@@ -25,11 +25,6 @@ const Footer = () => (
           <nav className="level is-mobile">
             <div className="level-left">
               <p className="level-item">
-                <OutboundLink href="https://www.facebook.com/SuncoastDevelopersGuild/">
-                  <Icon i="fab fa-facebook fa-lg" />
-                </OutboundLink>
-              </p>
-              <p className="level-item">
                 <OutboundLink href="https://twitter.com/suncoastio">
                   <Icon i="fab fa-twitter fa-lg" />
                 </OutboundLink>
@@ -37,11 +32,6 @@ const Footer = () => (
               <p className="level-item">
                 <OutboundLink href="https://www.meetup.com/suncoast-developers-guild/">
                   <Icon i="fab fa-meetup fa-lg" />
-                </OutboundLink>
-              </p>
-              <p className="level-item">
-                <OutboundLink href="https://www.instagram.com/suncoastdevelopersguild">
-                  <Icon i="fab fa-instagram fa-lg" />
                 </OutboundLink>
               </p>
               <p className="level-item">

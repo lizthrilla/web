@@ -2,13 +2,8 @@ export default [
   [],
   [
     {
-      type: 'radio',
+      type: 'cohort',
       question: 'When are you hoping to start the program?',
-      answers: [
-        'May 2020 (Cohort 18)',
-        'August 2020 (Cohort 19)',
-        'Later in the future'
-      ]
     },
     {
       type: 'check',
@@ -27,13 +22,13 @@ export default [
         'Flyer',
         'Creative Loafing',
         'Referral',
-        'Other'
-      ]
+        'Other',
+      ],
     },
     {
       type: 'medium-text',
       question:
-        'Tell us more about how you heard about SDG. If it was a referral, let us know who to thank!'
+        'Tell us more about how you heard about SDG. If it was a referral, let us know who to thank!',
     },
     {
       type: 'select',
@@ -46,8 +41,8 @@ export default [
         'Sarasota County',
         'Polk County',
         'Elsewhere in Florida',
-        'Outside of Florida'
-      ]
-    }
-  ]
+        'Outside of Florida',
+      ],
+    },
+  ],
 ]
