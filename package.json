@@ -3,6 +3,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
+    "postinstall": "cd plugins/gatsby-source-gateway && yarn install",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
     "format": "prettier --write \"src/**/*.js\""
