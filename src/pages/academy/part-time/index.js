@@ -98,7 +98,7 @@ const PartTimeCourses = () => (
     <AcademyNavigation />
     <Section>
       <Container>
-        <PageTitle>Part-Time Courses</PageTitle>
+        <PageTitle>Weekend Courses</PageTitle>
         <div className="content">
           <p>
             Our <Link to="/academy">Web Development Program</Link> is an

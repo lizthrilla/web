@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DailySchedule = () => (
+const ImmersiveProgram = () => (
   <>
     <div className="content">
       <h3 className="title is-3">Daily Schedule</h3>
@@ -82,4 +82,4 @@ const DailySchedule = () => (
   </>
 )
 
-export default DailySchedule
+export default ImmersiveProgram

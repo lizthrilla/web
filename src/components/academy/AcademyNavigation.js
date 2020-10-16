@@ -16,8 +16,9 @@ const AcademyNavigation = () => (
               paths={[
                 '/academy',
                 '/academy/catalog',
-                '/academy/schedule/',
-                '/academy/career'
+                '/academy/immersive/',
+                '/academy/curriculum/',
+                '/academy/career',
               ]}
             >
               Web Development
@@ -29,13 +30,13 @@ const AcademyNavigation = () => (
                 '/academy/tuition',
                 '/academy/tuition/financing',
                 '/academy/admissions',
-                '/academy/admissions/requirements'
+                '/academy/admissions/requirements',
               ]}
             >
               Tuition &amp; Admissions
             </NavItem>
             <NavItem to="/academy/part-time" icon="fas fa-sun-haze fa-lg">
-              Part-Time
+              Weekend Courses
             </NavItem>
             <NavItem
               to="/academy/tuition/scholarships"

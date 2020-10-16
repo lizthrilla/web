@@ -47,12 +47,16 @@ const AcademyCommunityDuo = () => (
               With thousands of members across dozens of local groups, our
               members touch all aspects of technology development in Tampa Bay.
             </p>
-            <p>
+            <p class="buttons is-centered">
               <a
                 href="https://join.slack.com/t/suncoast-devs/shared_invite/enQtNzY1NDAxMjk4NTYzLWUwZGQ4NjhjMmJiMmI5YTc4OGEzYjViMTgzNWQ1MGViZWI5MzI4NWRlNTAyMzljYjU1ZTNiYjkzZWY2YmI3NTE"
                 className="button is-primary"
               >
                 Join us on Slack
+              </a>
+
+              <a href="https://sdg.codes/discord" className="button is-primary">
+                Join us on Discord
               </a>
             </p>
           </div>

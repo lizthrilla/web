@@ -1,23 +1,23 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
-import PageTitle from '../../components/PageTitle'
 import Section from '../../components/Section'
+import PageTitle from '../../components/PageTitle'
 import AcademyNavigation from '../../components/academy/AcademyNavigation'
 import ProgramNavigation from '../../components/academy/ProgramNavigation'
-import ProgramSchedule from '../../components/academy/ProgramSchedule'
+import NightShiftProgram from '../../components/academy/NightShiftProgram'
 
-const AcademyIndex = () => (
+const AcademyNightShift = () => (
   <Layout>
     <AcademyNavigation />
     <Section>
       <Container>
-        <PageTitle seo="Our Curriculum">Web Development Program</PageTitle>
+        <PageTitle seo="Night Shift Program">Web Development Program</PageTitle>
         <ProgramNavigation />
-        <ProgramSchedule />
+        <NightShiftProgram />
       </Container>
     </Section>
   </Layout>
 )
 
-export default AcademyIndex
+export default AcademyNightShift

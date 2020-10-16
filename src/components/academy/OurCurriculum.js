@@ -7,12 +7,12 @@ const OurCurriculum = () => (
 
     <div className="content">
       <p>
-        Our three-month program runs four cohorts per year, starting roughly
-        every quarter. We prepare individuals for entry-level jobs as junior
-        front-end or back-end web developers. Graduates will be able to find
-        employment with companies who build and maintain their own websites and
-        web applications (i.e. product work), or with agencies that produce
-        websites and web applications for other companies (i.e. client work).
+        Our program runs multiple cohorts per year, starting roughly every
+        quarter. We prepare individuals for entry-level jobs as junior front-end
+        or back-end web developers. Graduates will be able to find employment
+        with companies who build and maintain their own websites and web
+        applications (i.e. product work), or with agencies that produce websites
+        and web applications for other companies (i.e. client work).
       </p>
       <p>
         Students will learn client-side (front-end) technology: HTML, CSS, and

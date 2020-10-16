@@ -46,7 +46,7 @@ class MainNavigation extends Component {
             </h1>
             <span
               className={cx('navbar-burger burger', {
-                'is-active': active
+                'is-active': active,
               })}
               onClick={this._toggle}
             >
@@ -72,7 +72,7 @@ class MainNavigation extends Component {
                     Tuition &amp; Financing
                   </Link>
                   <Link to="/academy/part-time" className="navbar-item">
-                    Part-Time Courses
+                    Weekend Courses
                   </Link>
                   <Link
                     to="/academy/tuition/scholarships"
@@ -103,11 +103,17 @@ class MainNavigation extends Component {
                   Community
                 </Link>
                 <div className="navbar-dropdown">
+                  <Link to="/conference" className="navbar-item">
+                    Conference
+                  </Link>
                   <Link to="/community" className="navbar-item">
                     Member Organizations
                   </Link>
                   <Link to="/community/joint-training" className="navbar-item">
                     Corporate Training
+                  </Link>
+                  <Link to="/jr" className="navbar-item">
+                    Kid's Classes
                   </Link>
                   <Link to="/community/supporters" className="navbar-item">
                     Supporters
