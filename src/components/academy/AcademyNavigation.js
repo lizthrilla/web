@@ -16,8 +16,9 @@ const AcademyNavigation = () => (
               paths={[
                 '/academy',
                 '/academy/catalog',
-                '/academy/immersive/',
-                '/academy/curriculum/',
+                '/academy/immersive',
+                '/academy/curriculum',
+                '/academy/night-shift',
                 '/academy/career',
               ]}
             >
