@@ -19,16 +19,16 @@ const PressPage = () => (
     <Section>
       <Container>
         <article className="media">
-          <article className="media">
-            <div className="media-content">
-              <strong>
-                <Link to="/press/night-shift">
-                  St. Pete’s Coding Academy to Offer Night Classes
-                </Link>
-              </strong>
-            </div>
-            <div className="media-right">October 16, 2020</div>
-          </article>
+          <div className="media-content">
+            <strong>
+              <Link to="/press/night-shift">
+                St. Pete’s Coding Academy to Offer Night Classes
+              </Link>
+            </strong>
+          </div>
+          <div className="media-right">October 16, 2020</div>
+        </article>
+        <article className="media">
           <div className="media-content">
             <strong>
               <Link to="/press/2020-summer-conference">
