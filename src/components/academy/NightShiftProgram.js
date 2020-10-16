@@ -55,7 +55,7 @@ const NightShiftProgram = () => (
         on the above schedule.
       </p>
 
-      <p>
+      <p class="has-text-centered">
         <Link to="/academy/apply" className="button is-primary">
           <span>Apply Now</span>
         </Link>

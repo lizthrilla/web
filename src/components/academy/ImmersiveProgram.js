@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 const ImmersiveProgram = () => (
   <>
@@ -77,6 +78,12 @@ const ImmersiveProgram = () => (
         Friday's class hour content will be different the rest of the week (e.g.
         Career Support, guest speakers). Fridays end early with optional
         off-campus social time.
+      </p>
+
+      <p class="has-text-centered">
+        <Link to="/academy/apply" className="button is-primary">
+          <span>Apply Now</span>
+        </Link>
       </p>
     </div>
   </>
