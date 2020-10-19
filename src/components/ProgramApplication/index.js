@@ -279,10 +279,11 @@ class ProgramApplication extends Component {
                 <div className="message is-primary">
                   <p className="message-body">
                     This is an inquiry for our{' '}
-                    <strong>full-time immersive</strong> web development program
-                    . If you're interested in after hours learning, you can
-                    register for our{' '}
-                    <Link to="/academy/part-time">part-time courses</Link>.
+                    <strong>full-time Immersive</strong> and{' '}
+                    <strong>part-time Night Shift</strong> web development
+                    programs . If you're interested in other after hours
+                    learning, you can register for our{' '}
+                    <Link to="/academy/part-time">weekend courses</Link>.
                   </p>
                 </div>
               </div>
