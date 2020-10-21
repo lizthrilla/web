@@ -26,7 +26,7 @@ const PressPage = () => (
               </Link>
             </strong>
           </div>
-          <div className="media-right">October 16, 2020</div>
+          <div className="media-right">October 21, 2020</div>
         </article>
         <article className="media">
           <div className="media-content">
