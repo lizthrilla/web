@@ -7,6 +7,7 @@ import QUESTIONS from './questions'
 import Steps from './Steps'
 import Question from './Question'
 import Icon from '../Icon'
+import Calendly from '../Calendly'
 
 const LAST_STEP = 1
 
@@ -314,19 +315,10 @@ class ProgramApplication extends Component {
                   Your <strong>next step is a casual interview</strong> where
                   you to get to learn more about the program and we can answer
                   any questions you may have.{' '}
-                  <em>
-                    Our enrollment specialist will reach out to you to schedule
-                    your interview.
-                  </em>
-                </p>
-                <p>
-                  If you have not already, see if you're eligible for any of{' '}
-                  <Link to="/academy/tuition/scholarships">
-                    our scholarships
-                  </Link>
-                  .
+                  <em>You can schedule it right now.</em>
                 </p>
               </div>
+              <Calendly />
             </>
           )}
           <hr />
