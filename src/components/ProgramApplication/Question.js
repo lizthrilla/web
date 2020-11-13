@@ -15,13 +15,13 @@ const Question = ({
       query={graphql`
         query {
           allCohort(
-            sort: { order: ASC, fields: begins_on }
-            filter: { is_enrolling: { eq: true } }
+            sort: { order: ASC, fields: beginsOn }
+            filter: { isEnrolling: { eq: true } }
           ) {
             nodes {
               id
               name
-              begins_on(formatString: "MMMM YYYY")
+              beginsOn(formatString: "MMMM YYYY")
               format
             }
           }
