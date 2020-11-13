@@ -7,16 +7,16 @@ const ProgramSchedule = () => (
   <StaticQuery
     query={graphql`
       query {
-        allCohort(sort: { order: ASC, fields: begins_on }) {
+        allCohort(sort: { order: ASC, fields: beginsOn }) {
           nodes {
             id
             name
-            is_enrolling
-            begins_on(formatString: "MMMM D, YYYY")
-            ends_on(formatString: "MMMM Do, YYYY")
-            alt_begins_on: begins_on(formatString: "MMMM YYYY")
-            alt_ends_on: ends_on(formatString: "MMMM YYYY")
-            days_from_now: begins_on(difference: "days")
+            isEnrolling
+            beginsOn(formatString: "MMMM D, YYYY")
+            endsOn(formatString: "MMMM Do, YYYY")
+            altBeginsOn: beginsOn(formatString: "MMMM YYYY")
+            altEndsOn: endsOn(formatString: "MMMM YYYY")
+            daysFromNow: beginsOn(difference: "days")
             format
             delivery
             note
@@ -45,25 +45,24 @@ const ProgramSchedule = () => (
                   key={cohort.id}
                   className={cx({
                     upcoming:
-                      cohort.is_enrolling &&
-                      parseInt(cohort.days_from_now) > -90,
+                      cohort.isEnrolling && parseInt(cohort.daysFromNow) > -90,
                   })}
                 >
                   <td>Cohort {cohort.name}</td>
                   <td>
-                    {cohort.is_enrolling && (
+                    {cohort.isEnrolling && (
                       <Link to="/academy/apply">Now Enrolling</Link>
                     )}
                   </td>
                   <td>
-                    {parseInt(cohort.days_from_now) < -180
-                      ? cohort.alt_begins_on
-                      : cohort.begins_on}
+                    {parseInt(cohort.daysFromNow) < -180
+                      ? cohort.altBeginsOn
+                      : cohort.beginsOn}
                   </td>
                   <td>
-                    {parseInt(cohort.days_from_now) < -180
-                      ? cohort.alt_ends_on
-                      : cohort.ends_on}
+                    {parseInt(cohort.daysFromNow) < -180
+                      ? cohort.altEndsOn
+                      : cohort.endsOn}
                   </td>
                   <td>
                     {cohort.format} / {cohort.delivery}
