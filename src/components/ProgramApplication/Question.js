@@ -45,7 +45,7 @@ const Question = ({
                           update(question, e.target.value)
                         }}
                       />
-                      Cohort {cohort.name} - {cohort.begins_on}, {cohort.format}
+                      Cohort {cohort.name} - {cohort.beginsOn}, {cohort.format}
                     </label>
                   </li>
                 ))}
