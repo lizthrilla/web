@@ -23,12 +23,12 @@ const COURSES = {
   //   end: '2019-04-20',
   // },
   wdtd: {
-    session: 'Fall Session 2020',
+    session: 'Spring Session 2021',
     name: 'Web Development Test Drive',
     days: 'Saturdays',
     time: '10:00 a.m. - 3:00 p.m.',
-    start: '2020-09-19',
-    end: '2020-10-24',
+    start: '2021-02-20',
+    end: '2021-03-27',
   },
   // rbiw: {
   //   session: 'Summer Session',
