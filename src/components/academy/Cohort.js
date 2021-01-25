@@ -17,7 +17,7 @@ const Cohort = ({
   sponsorLogo,
   sponsorText,
   thankYou,
-  thankYouImage
+  thankYouImage,
 }) => {
   return (
     <>
@@ -55,14 +55,14 @@ const Cohort = ({
 
             <h3>Interested in taking classes or learning more?</h3>
             <p>
-              We are now accepting applications for our next cohort begining May
-              11, 2020. <Link to="/academy">Find out more.</Link>
+              We are now accepting applications for our next cohort,{' '}
+              <Link to="/academy">find out more.</Link>
             </p>
           </div>
 
           <h3 className="title is-3">Our Graduates</h3>
 
-          {demo_day_graduate.map(grad => (
+          {demo_day_graduate.map((grad) => (
             <Graduate {...grad} cohortSlug={slug} key={grad.student.name} />
           ))}
         </Container>
@@ -75,7 +75,7 @@ const Cohort = ({
                 <div
                   className="content"
                   dangerouslySetInnerHTML={{
-                    __html: thankYou.childMarkdownRemark.html
+                    __html: thankYou.childMarkdownRemark.html,
                   }}
                 />
                 <Image
@@ -92,7 +92,7 @@ const Cohort = ({
                 <div
                   className="content"
                   dangerouslySetInnerHTML={{
-                    __html: sponsorText.childMarkdownRemark.html
+                    __html: sponsorText.childMarkdownRemark.html,
                   }}
                 />
                 <Image
