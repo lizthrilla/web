@@ -90,10 +90,8 @@ const TestDriveCourse = ({ data }) => (
               </p>
 
               <p>
-                Classes are once week (as scheduled) at 10:00 a.m. Optional lab
-                time generally begins at 3:00 p.m. The course is taught{' '}
-                <strong>in-person</strong>, on our campus at 2220 Central Ave,
-                St. Petersburg, Florida.
+                Classes are once week (as scheduled) at 10:00 a.m to 3 P.M. The course is taught{' '}
+                <strong>online</strong>.
               </p>
 
               <p>
@@ -142,34 +140,28 @@ const TestDriveCourse = ({ data }) => (
                 <tr>
                   <th>
                     <h5 className="title is-5">Week One</h5>
-                    <h6 className="subtitle is-6">HTML and CSS Foundations</h6>
+                    <h6 className="subtitle is-6">Intro to HTML</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>
-                        Using a developer environment (Git, IDE, terminal)
-                      </li>
-                      <li>Deploy a web page</li>
-                      <li>Basics of HTML and HTML5</li>
+                      <li>Basics of HTML</li>
                       <li>Using semantic HTML</li>
-                      <li>Using CSS to style a page</li>
-                      <li>Using CSS to layout a page</li>
-                      <li>
-                        How to breakdown and implement a basic webpage design
-                      </li>
+                      <li>Our online development environment</li>
+                      <li>Web Accessibility</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <th>
                     <h5 className="title is-5">Week Two</h5>
-                    <h6 className="subtitle is-6">HTML and CSS Mastery</h6>
+                    <h6 className="subtitle is-6">Intro to CSS</h6>
                   </th>
                   <td>
                     <ul>
-                      <li>Creating Responsive webpages</li>
-                      <li>Advanced CSS tricks</li>
-                      <li>Using CDNs</li>
+                      <li>Basics of CSS</li>
+                      <li>How does CSS improves the development experience?</li>
+                      <li>Common CSS properties</li>
+                      <li>Classes and IDs</li>
                     </ul>
                   </td>
                 </tr>
@@ -177,15 +169,15 @@ const TestDriveCourse = ({ data }) => (
                   <th>
                     <h5 className="title is-5">Week Three</h5>
                     <h6 className="subtitle is-6">
-                      Using JavaScript on the Web
+                      CSS Layouts
                     </h6>
                   </th>
                   <td>
                     <ul>
-                      <li>What is the DOM?</li>
-                      <li>Using JavaScript on a webpage</li>
-                      <li>Control Flow (if, loops, functions)</li>
-                      <li>Basic algorithmic thinking</li>
+                      <li>Using CSS to layout a webpage</li>
+                      <li>The box model</li>
+                      <li>Flexbox</li>
+                      <li>CSS Grid</li>
                     </ul>
                   </td>
                 </tr>
@@ -193,15 +185,15 @@ const TestDriveCourse = ({ data }) => (
                   <th>
                     <h5 className="title is-5">Week Four</h5>
                     <h6 className="subtitle is-6">
-                      Data Structures and Algorithms
+                      Responsive Web
                     </h6>
                   </th>
                   <td>
                     <ul>
-                      <li>Arrays</li>
-                      <li>Objects</li>
-                      <li>Map, filter, reduce</li>
-                      <li>Applications of Algorithms</li>
+                      <li>Improving the experience on different sized screens</li>
+                      <li>Media Queries</li>
+                      <li>Responsive Design</li>
+                      <li>Mobile First Design</li>
                     </ul>
                   </td>
                 </tr>
@@ -209,12 +201,17 @@ const TestDriveCourse = ({ data }) => (
                   <th>
                     <h5 className="title is-5">Week Five</h5>
                     <h6 className="subtitle is-6">
-                      Problem Solving with JavaScript
+                      Intro to JavaScript
                     </h6>
                   </th>
                   <td>
                     <ul>
-                      <li>Practical application of PEDAC and JavaScript</li>
+                      <li>What is JavaScript?</li>
+                      <li>Variables and Types</li>
+                      <li>The Dom</li>
+                      <li>Functions</li>
+                      <li>Events</li>
+                      <li>Using CSS and JavaScript Together</li>
                     </ul>
                   </td>
                 </tr>
@@ -222,13 +219,13 @@ const TestDriveCourse = ({ data }) => (
                   <th>
                     <h5 className="title is-5">Week Six</h5>
                     <h6 className="subtitle is-6">
-                      APIs and Bringing it all Together
+                    Putting it altogether
                     </h6>
                   </th>
                   <td>
                     <ul>
-                      <li>Using an API to get data</li>
-                      <li>Building a full website, using APIs</li>
+                      <li>Arrays and Loops</li>
+                      <li>Inputs and Javascript</li>
                     </ul>
                   </td>
                 </tr>
@@ -252,11 +249,6 @@ const TestDriveCourse = ({ data }) => (
                 <li>
                   Implement JavaScript to manipulate and HTML webpage's behavior
                 </li>
-                <li>Solve simple problems with JavaScript</li>
-                <li>
-                  Utilize, using JavaScript, APIs to build data driven websites
-                </li>
-                <li>Create a website and deploy it to the internet</li>
               </ul>
             </div>
           </div>
