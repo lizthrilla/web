@@ -37,7 +37,7 @@ const AcademyNetwork = ({ data }) => (
               Speak to students during the cohort, host field trips and lighting
               talks at your offices!
             </li>
-            <li>Meet our upcoming graduates before Demo Day.</li>
+            <li>Meet our upcoming graduates <em>before</em> graduation.</li>
             <li>Access our reverse job board.</li>
           </ul>
         </div>

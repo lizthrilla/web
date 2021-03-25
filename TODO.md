@@ -16,7 +16,7 @@
 - [x] Add calls to action to homepage
 - [x] Add store and kids classes to homepage
 - [x] Mini-carousel of photos for "Take a Tour"
-- [ ] Port Demo Day sites (include each cohort).
+- [x] Port Demo Day sites (include each cohort).
 
 ### Illustrations
 

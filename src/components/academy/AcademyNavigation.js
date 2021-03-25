@@ -54,7 +54,7 @@ const AcademyNavigation = () => (
             <NavItem to="/academy/faq" icon="fas fa-puzzle-piece fa-lg">
               FAQ
             </NavItem>
-            <NavItem to="/demo-day" icon="fas fa-graduation-cap fa-lg">
+            <NavItem to="/grads" icon="fas fa-graduation-cap fa-lg">
               Graduates
             </NavItem>
           </nav>

@@ -80,7 +80,7 @@ exports.createPages = ({ graphql, actions }) => {
         const demoDays = result.data.allContentfulDemoDay.edges
         demoDays.forEach(({ node: demoDay }) => {
           createPage({
-            path: `/demo-day/${demoDay.slug}/`,
+            path: `/grads/${demoDay.slug}/`,
             component: demoDayTemplate,
             context: {
               slug: demoDay.slug

@@ -8,11 +8,15 @@
 
 [[redirects]]
   from = "https://demoday.suncoast.io"
-  to = "https://suncoast.io/demo-day"
+  to = "https://suncoast.io/grads"
 
 [[redirects]]
   from = "https://demoday.suncoast.io"
-  to = "https://suncoast.io/demo-day"
+  to = "https://suncoast.io/grads"
+
+[[redirects]]
+  from = "/demo-day/*"
+  to = "https://suncoast.io/grads"
 
 [[redirects]]
   from = "/conference/*"

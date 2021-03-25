@@ -89,7 +89,7 @@ class MainNavigation extends Component {
                   <Link to="/academy/faq" className="navbar-item">
                     FAQ
                   </Link>
-                  <Link to="/demo-day" className="navbar-item">
+                  <Link to="/grads" className="navbar-item">
                     Graduates
                   </Link>
                   <hr className="navbar-divider" />

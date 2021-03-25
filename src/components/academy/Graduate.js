@@ -28,7 +28,7 @@ const Graduate = ({
       <div className="column">
         <h4 className="title is-4">
           {slug ? (
-            <Link to={`/demo-day/${cohortSlug}/${slug}`}>{student.name}</Link>
+            <Link to={`/grads/${cohortSlug}/${slug}`}>{student.name}</Link>
           ) : (
             student.name
           )}

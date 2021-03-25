@@ -19,7 +19,7 @@ const ContactPage = () => (
               <p>Are you interested in:</p>
               <ul>
                 <li>Learning web development?</li>
-                <li>Demo Day &amp; hiring events?</li>
+                <li>Graduates &amp; hiring?</li>
                 <li>Community events?</li>
                 <li>Donating or becoming a sponsor?</li>
                 <li>Volunteering?</li>

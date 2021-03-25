@@ -7,6 +7,7 @@ import Container from '../../components/Container'
 import Section from '../../components/Section'
 import PageTitle from '../../components/PageTitle'
 import Graduate from './Graduate'
+import GradsNavigation from './GradsNavigation'
 
 const Cohort = ({
   slug,
@@ -24,7 +25,7 @@ const Cohort = ({
       <Section>
         <Container>
           <header className="cohort-header">
-            <PageTitle>{`${title} Demo Day`}</PageTitle>
+            <PageTitle>{`${title} Graduates`}</PageTitle>
             <h4 className="subtitle is-4">
               {moment(date).format('MMMM, Do Y')}
             </h4>
@@ -58,6 +59,9 @@ const Cohort = ({
               We are now accepting applications for our next cohort,{' '}
               <Link to="/academy">find out more.</Link>
             </p>
+            <div className="is-pulled-right">
+              <GradsNavigation />
+            </div>
           </div>
 
           <h3 className="title is-3">Our Graduates</h3>
@@ -104,6 +108,7 @@ const Cohort = ({
               </>
             )}
           </div>
+          <GradsNavigation />
         </div>
       </section>
     </>

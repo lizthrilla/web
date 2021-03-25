@@ -22,7 +22,7 @@ const Graduate = ({ data }) => {
       <Section>
         <Container>
           <header className="cohort-header">
-            <PageTitle>{`${demoDay.title} Demo Day`}</PageTitle>
+            <PageTitle>{`${demoDay.title} Graduates`}</PageTitle>
             <h4 className="subtitle is-4">
               {moment(demoDay.date).format('MMMM, Do Y')}
             </h4>
@@ -31,7 +31,7 @@ const Graduate = ({ data }) => {
             </figure>
           </header>
           <p>
-            <Link to={`demo-day/${demoDay.slug}`}>
+            <Link to={`grads/${demoDay.slug}`}>
               <Icon i="fas fa-arrow-circle-left" />
               All Graduates
             </Link>

@@ -38,7 +38,7 @@ export default () => (
           <td>Healthy Snacks + Sponsor Promotion</td>
         </tr>
         <tr>
-          <th>Demo Day </th>
+          <th>Graduation </th>
           <td>$2,500</td>
           <td>Healthy Snacks + Sponsor Promotion</td>
         </tr>
