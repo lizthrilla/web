@@ -70,17 +70,12 @@ class HeroAward extends React.Component {
             <PageTitle>Application for Hero Award Scholarship</PageTitle>
             <div className="content">
               <p>
-                <strong>Suncoast Developers Guild</strong> aims recognize the
-                contributions of our local heroes and everything they do to for
-                our community by offering a scholarship of{' '}
+                <strong>Suncoast Developers Guild</strong> aims to recognize the contributions of our local heroes and everything they do for our community by offering a scholarship of{' '}
                 <strong>$1,900</strong>.
               </p>
               <ul>
                 <li>
-                  This opportunity is available to members (or the spouses,
-                  partners, parents, and children) of military veterans (or
-                  active-duty), first responders, law enforcement, and school
-                  teachers.
+                This opportunity is available to members (or the spouses, partners, parents, and children) of the veterans or active-duty military, first responders, law enforcement, and teachers.
                 </li>
                 <li>
                   We will deduct the scholarship amount ($1,900) from the total
