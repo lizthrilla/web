@@ -47,7 +47,7 @@ const BlogIndex = ({ data }) => {
                     <div
                       className="content"
                       dangerouslySetInnerHTML={{
-                        __html: post.description.childMarkdownRemark.html
+                        __html: post.description.childMarkdownRemark.html,
                       }}
                     />
                     <hr />

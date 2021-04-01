@@ -52,7 +52,7 @@ const Graduate = ({ data }) => {
               <h4
                 className="subtitle is-4"
                 dangerouslySetInnerHTML={{
-                  __html: grad.tagLine
+                  __html: grad.tagLine,
                 }}
               />
               <div
@@ -60,7 +60,7 @@ const Graduate = ({ data }) => {
                 dangerouslySetInnerHTML={{
                   __html: grad.description
                     ? grad.description.childMarkdownRemark.html
-                    : ''
+                    : '',
                 }}
               />
             </div>

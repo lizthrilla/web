@@ -9,7 +9,7 @@ const Code = ({ codeString, language, ...props }) => {
   const languageMap = {
     'C#': 'cpp',
     js: 'javascript',
-    HTML: 'html'
+    HTML: 'html',
   }
 
   return (
@@ -27,7 +27,7 @@ const Code = ({ codeString, language, ...props }) => {
                 cursor: 'pointer',
                 position: 'absolute',
                 top: 0,
-                right: 0
+                right: 0,
               }}
             >
               {copied ? 'COPIED!' : 'COPY'}
