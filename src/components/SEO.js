@@ -7,41 +7,41 @@ const SEO = ({ title, description, photo, url }) => {
   const titleFields = [
     {
       property: 'og:title',
-      content: title
+      content: title,
     },
-    { name: 'twitter:title', content: title }
+    { name: 'twitter:title', content: title },
   ]
 
   const descriptionFields = [
     { name: 'description', content: description },
     {
       property: 'og:description',
-      content: description
+      content: description,
     },
     {
       name: 'twitter:description',
-      content: description
-    }
+      content: description,
+    },
   ]
 
   const photoURL = photo && photo.replace(/^\/\//, 'https://')
   const photoFields = [
     {
       property: 'og:image:width',
-      content: '1200'
+      content: '1200',
     },
     {
       property: 'og:image:height',
-      content: '630'
+      content: '630',
     },
     {
       property: 'og:image',
-      content: photoURL
+      content: photoURL,
     },
     {
       name: 'twitter:image',
-      content: photoURL
-    }
+      content: photoURL,
+    },
   ]
   return (
     <StaticQuery
@@ -54,7 +54,7 @@ const SEO = ({ title, description, photo, url }) => {
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const { siteUrl } = data.site.siteMetadata
         return (
           <Location>
@@ -63,11 +63,11 @@ const SEO = ({ title, description, photo, url }) => {
                 meta={[
                   {
                     property: 'og:url',
-                    content: url ? url : siteUrl + location.pathname
+                    content: url ? url : siteUrl + location.pathname,
                   },
                   ...(title ? titleFields : []),
                   ...(description ? descriptionFields : []),
-                  ...(photo ? photoFields : [])
+                  ...(photo ? photoFields : []),
                 ]}
               />
             )}

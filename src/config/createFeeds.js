@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Feed = require('feed').Feed
 
-module.exports = graphql => {
+module.exports = (graphql) => {
   return new Promise((resolve, reject) => {
     resolve(
       graphql(`
@@ -41,7 +41,7 @@ module.exports = graphql => {
             }
           }
         }
-      `).then(result => {
+      `).then((result) => {
         if (result.errors) reject(result.errors)
         const config = result.data.site
         let feed = new Feed({
@@ -55,12 +55,12 @@ module.exports = graphql => {
           updated: new Date(), // TODO: latest post date
           feedLinks: {
             atom: `${config.siteMetadata.siteUrl}/atom.xml`,
-            json: `${config.siteMetadata.siteUrl}/feed.json`
+            json: `${config.siteMetadata.siteUrl}/feed.json`,
           },
           author: {
             name: 'Suncoast Developers Guild',
-            email: 'hello@suncoast.io'
-          }
+            email: 'hello@suncoast.io',
+          },
         })
         result.data.allContentfulBlogPost.edges.forEach(({ node: post }) => {
           feed.addItem({
@@ -72,8 +72,8 @@ module.exports = graphql => {
             image: 'https://' + post.heroImage.fluid.src,
             content: post.body.childMarkdownRemark.html,
             author: {
-              name: post.author.name
-            }
+              name: post.author.name,
+            },
           })
         })
         fs.writeFileSync('./public/atom.xml', feed.atom1())

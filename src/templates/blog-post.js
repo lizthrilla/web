@@ -18,7 +18,7 @@ const BackgroundSection = styled(BackgroundImage)`
 const BlogPost = ({ data }) => {
   const post = data.contentfulBlogPost
   const authorTitle = [post.author.title, post.author.company]
-    .filter(s => s)
+    .filter((s) => s)
     .join(' @ ')
 
   return (
@@ -59,7 +59,7 @@ const BlogPost = ({ data }) => {
               <div
                 className="content"
                 dangerouslySetInnerHTML={{
-                  __html: post.body.childMarkdownRemark.html
+                  __html: post.body.childMarkdownRemark.html,
                 }}
               />
               <hr />
@@ -68,7 +68,7 @@ const BlogPost = ({ data }) => {
                   <div className="level-item">
                     <Icon i="fas fa-tags" s="is-medium has-text-grey" />
                     <div className="tags">
-                      {post.tags.map(tag => (
+                      {post.tags.map((tag) => (
                         <span key={tag} className="tag">
                           {tag}
                         </span>
